@@ -12,6 +12,7 @@
 		0141C27C1EAB739A00DB8A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0141C27A1EAB739A00DB8A17 /* Main.storyboard */; };
 		0141C27E1EAB739A00DB8A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0141C27D1EAB739A00DB8A17 /* Assets.xcassets */; };
 		0141C2811EAB739A00DB8A17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0141C27F1EAB739A00DB8A17 /* LaunchScreen.storyboard */; };
+		99B2774DE10E4B1E77923871 /* Pods_mim_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6788E59DC4B334BC2CAE77FF /* Pods_mim_demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,9 @@
 		0141C2801EAB739A00DB8A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0141C2821EAB739A00DB8A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0141C2881EAB73DD00DB8A17 /* mim demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mim demo.entitlements"; sourceTree = "<group>"; };
+		2AEAD2B396598E5B9ED0CE98 /* Pods-mim demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mim demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mim demo/Pods-mim demo.debug.xcconfig"; sourceTree = "<group>"; };
+		6788E59DC4B334BC2CAE77FF /* Pods_mim_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mim_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E45C6A05AC94E45AA83FBDA8 /* Pods-mim demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mim demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-mim demo/Pods-mim demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B2774DE10E4B1E77923871 /* Pods_mim_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +46,8 @@
 			children = (
 				0141C2751EAB739A00DB8A17 /* mim demo */,
 				0141C2741EAB739A00DB8A17 /* Products */,
+				C2E7FB434B999DFD9DC58C5F /* Pods */,
+				E057BFDDD2FF4E9E0EEA2755 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +73,23 @@
 			path = "mim demo";
 			sourceTree = "<group>";
 		};
+		C2E7FB434B999DFD9DC58C5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2AEAD2B396598E5B9ED0CE98 /* Pods-mim demo.debug.xcconfig */,
+				E45C6A05AC94E45AA83FBDA8 /* Pods-mim demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E057BFDDD2FF4E9E0EEA2755 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6788E59DC4B334BC2CAE77FF /* Pods_mim_demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -73,9 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0141C2851EAB739A00DB8A17 /* Build configuration list for PBXNativeTarget "mim demo" */;
 			buildPhases = (
+				21706A55CF01B634369D84C8 /* [CP] Check Pods Manifest.lock */,
 				0141C26F1EAB739A00DB8A17 /* Sources */,
 				0141C2701EAB739A00DB8A17 /* Frameworks */,
 				0141C2711EAB739A00DB8A17 /* Resources */,
+				71C25FECD86671C65444FC0A /* [CP] Embed Pods Frameworks */,
+				C74AD0473E9DEBA8DE214280 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21706A55CF01B634369D84C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		71C25FECD86671C65444FC0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mim demo/Pods-mim demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C74AD0473E9DEBA8DE214280 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mim demo/Pods-mim demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0141C26F1EAB739A00DB8A17 /* Sources */ = {
@@ -266,11 +341,13 @@
 		};
 		0141C2861EAB739A00DB8A17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AEAD2B396598E5B9ED0CE98 /* Pods-mim demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "mim demo/mim demo.entitlements";
 				DEVELOPMENT_TEAM = 6AP8DGBG6H;
 				INFOPLIST_FILE = "mim demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.objectthink.mim.demo.mim-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -280,11 +357,13 @@
 		};
 		0141C2871EAB739A00DB8A17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E45C6A05AC94E45AA83FBDA8 /* Pods-mim demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "mim demo/mim demo.entitlements";
 				DEVELOPMENT_TEAM = 6AP8DGBG6H;
 				INFOPLIST_FILE = "mim demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.objectthink.mim.demo.mim-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -311,6 +390,7 @@
 				0141C2871EAB739A00DB8A17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
