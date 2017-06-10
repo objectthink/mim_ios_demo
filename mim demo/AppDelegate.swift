@@ -62,16 +62,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 //            print(response)
 //         }
       
-      _ = Alamofire.request(
+      
+      Alamofire.request(
          "http://10.52.50.83:3030/deviceTokens",
          method: .post,
          parameters: ["deviceToken":deviceTokenString],
          encoding: JSONEncoding.default).responseJSON
          {
             (response) in
+
+            print("DEVICE TOKENS")
             print(response)
          }
 
+      
+      let parameters: Parameters = ["deviceToken":"A0D05233EC3EA45AB1508545341CCB0DB365CE7A3804280BB87F0A6DF29DC292"]
+      
+      Alamofire.request(
+         "http://10.52.50.83:3030/userSettings/",
+         method: .get,
+         parameters: parameters,
+         encoding: URLEncoding()
+         ).responseJSON
+      { response in
+         //print(response.request)  // original URL request
+         //print(response.response) // HTTP URL response
+         //print(response.data)     // server data
+         //print(response.result)   // result of response serialization
+         
+         print("USER SETTINGS")
+         if let JSON = response.result.value {
+            print("JSON: \(JSON)")
+         }
+      }
       
 //      let dict = ["deviceid":deviceTokenString] as [String: Any]
 //      if let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
@@ -134,6 +157,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
          UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound])
          {
             (granted, error) in
+            
+            print(error)
+            print(granted)
          }
          
          application.registerForRemoteNotifications()
