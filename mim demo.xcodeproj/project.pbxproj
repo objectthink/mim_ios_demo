@@ -12,6 +12,7 @@
 		0141C27C1EAB739A00DB8A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0141C27A1EAB739A00DB8A17 /* Main.storyboard */; };
 		0141C27E1EAB739A00DB8A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0141C27D1EAB739A00DB8A17 /* Assets.xcassets */; };
 		0141C2811EAB739A00DB8A17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0141C27F1EAB739A00DB8A17 /* LaunchScreen.storyboard */; };
+		019986B11EEEA1C1003D3664 /* InstrumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019986B01EEEA1C1003D3664 /* InstrumentManager.swift */; };
 		99B2774DE10E4B1E77923871 /* Pods_mim_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6788E59DC4B334BC2CAE77FF /* Pods_mim_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		0141C2801EAB739A00DB8A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0141C2821EAB739A00DB8A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0141C2881EAB73DD00DB8A17 /* mim demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mim demo.entitlements"; sourceTree = "<group>"; };
+		019986B01EEEA1C1003D3664 /* InstrumentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentManager.swift; sourceTree = "<group>"; };
 		2AEAD2B396598E5B9ED0CE98 /* Pods-mim demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mim demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mim demo/Pods-mim demo.debug.xcconfig"; sourceTree = "<group>"; };
 		6788E59DC4B334BC2CAE77FF /* Pods_mim_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mim_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E45C6A05AC94E45AA83FBDA8 /* Pods-mim demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mim demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-mim demo/Pods-mim demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		0141C2751EAB739A00DB8A17 /* mim demo */ = {
 			isa = PBXGroup;
 			children = (
+				019986AF1EEEA184003D3664 /* InstrumentManager */,
 				0141C2881EAB73DD00DB8A17 /* mim demo.entitlements */,
 				0141C2761EAB739A00DB8A17 /* AppDelegate.swift */,
 				0141C2781EAB739A00DB8A17 /* ViewController.swift */,
@@ -71,6 +74,14 @@
 				0141C2821EAB739A00DB8A17 /* Info.plist */,
 			);
 			path = "mim demo";
+			sourceTree = "<group>";
+		};
+		019986AF1EEEA184003D3664 /* InstrumentManager */ = {
+			isa = PBXGroup;
+			children = (
+				019986B01EEEA1C1003D3664 /* InstrumentManager.swift */,
+			);
+			name = InstrumentManager;
 			sourceTree = "<group>";
 		};
 		C2E7FB434B999DFD9DC58C5F /* Pods */ = {
@@ -219,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019986B11EEEA1C1003D3664 /* InstrumentManager.swift in Sources */,
 				0141C2791EAB739A00DB8A17 /* ViewController.swift in Sources */,
 				0141C2771EAB739A00DB8A17 /* AppDelegate.swift in Sources */,
 			);

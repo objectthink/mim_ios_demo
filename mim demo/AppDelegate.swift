@@ -23,10 +23,27 @@ extension String: ParameterEncoding {
 }
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate
+class AppDelegate: UIResponder, UIApplicationDelegate, InstrumentManagerDelegate
 {
    
    var window: UIWindow?
+   
+   var _instrumentManager:InstrumentManager?
+   
+   func instrumentListUpdate(instruments: [Instrument])
+   {
+      for instrument in instruments
+      {
+         print("  client:\(instrument.name ?? "unknown")")
+         
+         if instrument.name == "Dio"
+         {
+            print("   GOT DIO!")
+            //instrument.location = "SOMEWHERE ELSE!"
+         }
+      }
+   }
+
    
    // Push notification received
    func application(
@@ -151,6 +168,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
    {
       // Override point for customization after application launch.
 
+      _instrumentManager = InstrumentManager(ip: "52.203.231.127", port: 4222)
+      _instrumentManager?.delegate = self
+
       // iOS 10 support
       if #available(iOS 10, *)
       {
@@ -158,7 +178,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
          {
             (granted, error) in
             
-            print(error)
+            print(error ?? "no error!")
             print(granted)
          }
          
