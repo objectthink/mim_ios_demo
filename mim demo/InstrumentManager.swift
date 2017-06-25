@@ -20,6 +20,14 @@ protocol InstrumentDelegate
 class Instrument
 {
    var heartbeat:String? //instrument unique identifier
+   {
+      didSet{
+         instrumentManager?.subscribe(subject: "\(heartbeat ?? "").realtimesignalsstatus", callback: { (payload) in
+            print(payload)
+         })
+      }
+   }
+   
    var name:String?
    var serialnumber:String?
    
@@ -53,9 +61,10 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
    var _socket:GCDAsyncSocket?
    var _heartbeats:Dictionary<String, Instrument> = [:]
    var _requests:Dictionary<String, (String)->()> = [:] //[replyto : callback]
-   
-   var _msgIndex:Int = 0
-   var _replytoIndex = 0
+   var _subscriptions:Dictionary<String, (String)->()> = [:]
+
+   var _msgIndex:Int = 10
+   var _replytoIndex = 10
    
    var delegate:InstrumentManagerDelegate?
    
@@ -121,6 +130,18 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
       _socket?.write(Data(bytes: Array(s.utf8)), withTimeout: -1, tag: 9)
       _socket?.write(Data(bytes: Array(p.utf8)), withTimeout: -1, tag: 9)
       _socket?.readData(withTimeout: -1, tag: 8)
+   }
+   
+   func subscribe(subject:String, callback:@escaping (String)->())
+   {
+      _msgIndex += 1
+      
+      let subscription = "SUB \(subject) \(_msgIndex)\r\n"
+      
+      _requests[subject] = callback
+      
+      _socket?.write(Data(bytes: Array(subscription.utf8)), withTimeout: -1, tag: 9)
+      _socket?.readData(withTimeout: -1, tag: 7)
    }
    
    func processReply(replyto:String, payload:String)
@@ -200,15 +221,15 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
                self.dGroup.leave()
             }
             
-            //dGroup.enter()
-            //request location
+            dGroup.enter()
+            //request instrument type
             request(subject: "\(payload).get", payload: "instrument type")
             {instrumentType in
                print("\(payload):instrument type:\(instrumentType)")
                
                self._heartbeats[payload]?.instrumentType = instrumentType
                
-               //self.dGroup.leave()
+               self.dGroup.leave()
             }
             
             //notify once we have all instrument info
