@@ -12,6 +12,10 @@
 		0141C27C1EAB739A00DB8A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0141C27A1EAB739A00DB8A17 /* Main.storyboard */; };
 		0141C27E1EAB739A00DB8A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0141C27D1EAB739A00DB8A17 /* Assets.xcassets */; };
 		0141C2811EAB739A00DB8A17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0141C27F1EAB739A00DB8A17 /* LaunchScreen.storyboard */; };
+		0166FEE91F005E2B00C861E3 /* InstrumentCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166FEE81F005E2B00C861E3 /* InstrumentCollectionViewController.swift */; };
+		0166FEEB1F00649400C861E3 /* InstrumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166FEEA1F00649400C861E3 /* InstrumentViewController.swift */; };
+		0166FEED1F00855800C861E3 /* InstrumentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166FEEC1F00855800C861E3 /* InstrumentInfoViewController.swift */; };
+		0166FEEF1F00878E00C861E3 /* SignalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166FEEE1F00878E00C861E3 /* SignalsTableViewController.swift */; };
 		019986B11EEEA1C1003D3664 /* InstrumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019986B01EEEA1C1003D3664 /* InstrumentManager.swift */; };
 		99B2774DE10E4B1E77923871 /* Pods_mim_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6788E59DC4B334BC2CAE77FF /* Pods_mim_demo.framework */; };
 /* End PBXBuildFile section */
@@ -25,6 +29,10 @@
 		0141C2801EAB739A00DB8A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0141C2821EAB739A00DB8A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0141C2881EAB73DD00DB8A17 /* mim demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mim demo.entitlements"; sourceTree = "<group>"; };
+		0166FEE81F005E2B00C861E3 /* InstrumentCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentCollectionViewController.swift; sourceTree = "<group>"; };
+		0166FEEA1F00649400C861E3 /* InstrumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentViewController.swift; sourceTree = "<group>"; };
+		0166FEEC1F00855800C861E3 /* InstrumentInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentInfoViewController.swift; sourceTree = "<group>"; };
+		0166FEEE1F00878E00C861E3 /* SignalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalsTableViewController.swift; sourceTree = "<group>"; };
 		019986B01EEEA1C1003D3664 /* InstrumentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentManager.swift; sourceTree = "<group>"; };
 		2AEAD2B396598E5B9ED0CE98 /* Pods-mim demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mim demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mim demo/Pods-mim demo.debug.xcconfig"; sourceTree = "<group>"; };
 		6788E59DC4B334BC2CAE77FF /* Pods_mim_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mim_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +80,10 @@
 				0141C27D1EAB739A00DB8A17 /* Assets.xcassets */,
 				0141C27F1EAB739A00DB8A17 /* LaunchScreen.storyboard */,
 				0141C2821EAB739A00DB8A17 /* Info.plist */,
+				0166FEE81F005E2B00C861E3 /* InstrumentCollectionViewController.swift */,
+				0166FEEA1F00649400C861E3 /* InstrumentViewController.swift */,
+				0166FEEC1F00855800C861E3 /* InstrumentInfoViewController.swift */,
+				0166FEEE1F00878E00C861E3 /* SignalsTableViewController.swift */,
 			);
 			path = "mim demo";
 			sourceTree = "<group>";
@@ -230,9 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0166FEEF1F00878E00C861E3 /* SignalsTableViewController.swift in Sources */,
+				0166FEEB1F00649400C861E3 /* InstrumentViewController.swift in Sources */,
+				0166FEED1F00855800C861E3 /* InstrumentInfoViewController.swift in Sources */,
 				019986B11EEEA1C1003D3664 /* InstrumentManager.swift in Sources */,
 				0141C2791EAB739A00DB8A17 /* ViewController.swift in Sources */,
 				0141C2771EAB739A00DB8A17 /* AppDelegate.swift in Sources */,
+				0166FEE91F005E2B00C861E3 /* InstrumentCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

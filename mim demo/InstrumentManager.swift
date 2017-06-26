@@ -15,10 +15,16 @@ protocol InstrumentManagerDelegate
 
 protocol InstrumentDelegate
 {
+   func notify(hint:String)
 }
 
 class Instrument
 {
+   var name:String?
+   var serialnumber:String?
+   
+   var realtimeSignals:[[String:Any]]?
+   
    var heartbeat:String? //instrument unique identifier
    {
       didSet{
@@ -26,12 +32,12 @@ class Instrument
             //print(payload)
             do {
                
-               let json = try JSONSerialization.jsonObject(with: payload.data(using: .utf8)!) as! [[String:Any]]
-               let first = json[9]
+               self.realtimeSignals = try JSONSerialization.jsonObject(with: payload.data(using: .utf8)!) as? [[String:Any]]
                
-               //INFORM LISTENERS HERE POSSIBLY THROUGH DELEGATE
-               
-               //print("\(self.name ?? "") \(first["_name"] ?? ""):\(first["_value"] ?? "") ")
+               if self.delegate != nil
+               {
+                  self.delegate?.notify(hint: "realtimeSignals")
+               }
                
             } catch let error as NSError {
                print(error)
@@ -39,9 +45,6 @@ class Instrument
          })
       }
    }
-   
-   var name:String?
-   var serialnumber:String?
    
    var location:String?
    {
@@ -57,6 +60,8 @@ class Instrument
       }
       
    }
+   
+   var delegate:InstrumentDelegate?
    
    var instrumentType:String?
    
@@ -80,7 +85,7 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
    
    var delegate:InstrumentManagerDelegate?
    
-   var dGroup:DispatchGroup
+   //var dGroup:DispatchGroup
    
    var instruments:[Instrument]
    {
@@ -89,7 +94,7 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
    
    init(ip:String, port:Int)
    {
-      dGroup = DispatchGroup()
+      //dGroup = DispatchGroup()
       
       super.init()
       
@@ -155,7 +160,9 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
    
    func processReply(replyto:String, payload:String)
    {
-      _requests[replyto]!(payload)
+      DispatchQueue.main.async {
+         self._requests[replyto]!(payload)
+      }
    }
    
    func processMSG(msg:String)
@@ -195,50 +202,64 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
             
             _socket?.write(Data(bytes: Array(error_sub.utf8)), withTimeout: -1, tag: 9)
             
-            //let dGroup = DispatchGroup()
+            let dGroup = DispatchGroup()
             
             dGroup.enter()
             //request name
             request(subject: "\(payload).get", payload: "name")
             {name in
-               print("\(payload):name:\(name)")
-               
-               self._heartbeats[payload]?.name = name
-               
-               self.dGroup.leave()
+               if(self._heartbeats[payload]?.name) == nil
+               {
+                  print("\(payload):name:\(name)")
+                  
+                  self._heartbeats[payload]?.name = name
+                  
+                  dGroup.leave()
+               }
             }
             
             dGroup.enter()
             //request serialnumber
             request(subject: "\(payload).get", payload: "serial number")
             {serialnumber in
-               print("\(payload):serial number:\(serialnumber)")
                
-               self._heartbeats[payload]?.serialnumber = serialnumber
-               
-               self.dGroup.leave()
+               if (self._heartbeats[payload]?.serialnumber) == nil
+               {
+                  print("\(payload):serial number:\(serialnumber)")
+
+                  self._heartbeats[payload]?.serialnumber = serialnumber
+                  
+                  dGroup.leave()
+               }
             }
             
             dGroup.enter()
             //request location
             request(subject: "\(payload).get", payload: "location")
             {location in
-               print("\(payload):location:\(location)")
                
-               self._heartbeats[payload]?.location = location
-               
-               self.dGroup.leave()
+               if(self._heartbeats[payload]?.location)==nil
+               {
+                  print("\(payload):location:\(location)")
+                  
+                  self._heartbeats[payload]?.location = location
+                  
+                  dGroup.leave()
+               }
             }
             
             dGroup.enter()
             //request instrument type
             request(subject: "\(payload).get", payload: "instrument type")
             {instrumentType in
-               print("\(payload):instrument type:\(instrumentType)")
-               
-               self._heartbeats[payload]?.instrumentType = instrumentType
-               
-               self.dGroup.leave()
+               if(self._heartbeats[payload]?.instrumentType)==nil
+               {
+                  print("\(payload):instrument type:\(instrumentType)")
+                  
+                  self._heartbeats[payload]?.instrumentType = instrumentType
+                  
+                  dGroup.leave()
+               }
             }
             
             //notify once we have all instrument info
