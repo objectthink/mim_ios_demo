@@ -16,9 +16,44 @@ class InstrumentInfoViewController: UIViewController {
       }
    }
    
+   @IBAction func stopButtonClick(_ sender: Any) {
+      instrument?.stop(callback: { (status) in
+         print("info view start:\(status)")
+         
+         let alert =
+            UIAlertController(
+               title: "Alert",
+               message: status,
+               preferredStyle: UIAlertControllerStyle.alert)
+         
+         alert.addAction(UIAlertAction(title: "Ok", style: .default)
+         { action in
+         })
+         
+         self.navigationController?.present(alert, animated: true, completion:
+         {
+         })
+      })
+   }
+   
    @IBAction func buttonClick(_ sender: Any) {
       instrument?.start(callback: { (status) in
          print("info view start:\(status)")
+         
+         let alert =
+            UIAlertController(
+               title: "Alert",
+               message: status,
+               preferredStyle: UIAlertControllerStyle.alert)
+         
+         alert.addAction(UIAlertAction(title: "Ok", style: .default)
+         { action in
+         })
+ 
+         self.navigationController?.present(alert, animated: true, completion:
+         {
+         })
+
       })
    }
    

@@ -67,6 +67,19 @@ class Instrument
          status in
          
          print("instrument start: \(status)")
+         
+         callback(status)
+      }
+   }
+   
+   func stop(callback:@escaping (String)->())
+   {
+      instrumentManager?.action(heartbeat: heartbeat!, payload:"stop"){
+         status in
+         
+         print("instrument stop: \(status)")
+         
+         callback(status)
       }
    }
    
