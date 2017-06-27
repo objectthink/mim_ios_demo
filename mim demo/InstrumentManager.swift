@@ -61,6 +61,15 @@ class Instrument
       
    }
    
+   func start(callback:@escaping (String)->())
+   {
+      instrumentManager?.action(heartbeat: heartbeat!, payload:"start"){
+         status in
+         
+         print("instrument start: \(status)")
+      }
+   }
+   
    var delegate:InstrumentDelegate?
    
    var instrumentType:String?
@@ -125,8 +134,13 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
       }
    }
    
-   func action(heartbeat:String, payload:String)
+   func action(heartbeat:String, payload:String, callback:@escaping (String)->())
    {
+      request(subject: "\(heartbeat).action", payload: payload)
+      {status in
+         print("action: \(status)")
+         callback(status)
+      }
    }
    /////////////////////////////
    

@@ -68,6 +68,11 @@ class InstrumentViewController: UITableViewController {
       {
       case 0:
          let controller = storyboard.instantiateViewController(withIdentifier: "InstrumentInfoViewController")
+         
+         let instrumentInfoViewController = controller as! InstrumentInfoViewController
+         
+         instrumentInfoViewController.instrument = instrument
+
          navigationController?.pushViewController(controller, animated: true)
          break
       case 1:
