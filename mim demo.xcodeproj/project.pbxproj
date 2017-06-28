@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011A368A1F032F4C00DFC0E6 /* Pods_mim_demo_tv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011A36891F032F4C00DFC0E6 /* Pods_mim_demo_tv.framework */; };
+		011A368B1F032F8100DFC0E6 /* Pods_mim_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198DE061F032A09003920C3 /* Pods_mim_demo.framework */; };
+		011A368C1F0331D700DFC0E6 /* InstrumentCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166FEE81F005E2B00C861E3 /* InstrumentCollectionViewController.swift */; };
+		0121FDEB1F032CDF0028FFE1 /* InstrumentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166FEEC1F00855800C861E3 /* InstrumentInfoViewController.swift */; };
+		0121FDEC1F032CDF0028FFE1 /* SignalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166FEEE1F00878E00C861E3 /* SignalsTableViewController.swift */; };
+		0121FDED1F032D270028FFE1 /* InstrumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166FEEA1F00649400C861E3 /* InstrumentViewController.swift */; };
 		0141C2771EAB739A00DB8A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0141C2761EAB739A00DB8A17 /* AppDelegate.swift */; };
 		0141C2791EAB739A00DB8A17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0141C2781EAB739A00DB8A17 /* ViewController.swift */; };
 		0141C27C1EAB739A00DB8A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0141C27A1EAB739A00DB8A17 /* Main.storyboard */; };
@@ -16,11 +22,15 @@
 		0166FEEB1F00649400C861E3 /* InstrumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166FEEA1F00649400C861E3 /* InstrumentViewController.swift */; };
 		0166FEED1F00855800C861E3 /* InstrumentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166FEEC1F00855800C861E3 /* InstrumentInfoViewController.swift */; };
 		0166FEEF1F00878E00C861E3 /* SignalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0166FEEE1F00878E00C861E3 /* SignalsTableViewController.swift */; };
+		0198DDF71F03288B003920C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0198DDF61F03288B003920C3 /* AppDelegate.swift */; };
+		0198DDFC1F03288B003920C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0198DDFA1F03288B003920C3 /* Main.storyboard */; };
+		0198DDFE1F03288C003920C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0198DDFD1F03288C003920C3 /* Assets.xcassets */; };
+		0198DE041F032959003920C3 /* InstrumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019986B01EEEA1C1003D3664 /* InstrumentManager.swift */; };
 		019986B11EEEA1C1003D3664 /* InstrumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019986B01EEEA1C1003D3664 /* InstrumentManager.swift */; };
-		99B2774DE10E4B1E77923871 /* Pods_mim_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6788E59DC4B334BC2CAE77FF /* Pods_mim_demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		011A36891F032F4C00DFC0E6 /* Pods_mim_demo_tv.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_mim_demo_tv.framework; path = "../../Library/Developer/Xcode/DerivedData/mim_demo-esdfziafxxuktbbbrlqhqjrjosdu/Build/Products/Debug-appletvsimulator/Pods_mim_demo_tv.framework"; sourceTree = "<group>"; };
 		0141C2731EAB739A00DB8A17 /* mim demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mim demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0141C2761EAB739A00DB8A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0141C2781EAB739A00DB8A17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,9 +43,20 @@
 		0166FEEA1F00649400C861E3 /* InstrumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentViewController.swift; sourceTree = "<group>"; };
 		0166FEEC1F00855800C861E3 /* InstrumentInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentInfoViewController.swift; sourceTree = "<group>"; };
 		0166FEEE1F00878E00C861E3 /* SignalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalsTableViewController.swift; sourceTree = "<group>"; };
+		0198DDF41F03288B003920C3 /* mim demo tv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mim demo tv.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0198DDF61F03288B003920C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0198DDFB1F03288B003920C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0198DDFD1F03288C003920C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0198DDFF1F03288C003920C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0198DE061F032A09003920C3 /* Pods_mim_demo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_mim_demo.framework; path = "../../Library/Developer/Xcode/DerivedData/mim_demo-esdfziafxxuktbbbrlqhqjrjosdu/Build/Products/Debug-iphonesimulator/Pods_mim_demo.framework"; sourceTree = "<group>"; };
+		0198DE081F032A1A003920C3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/mim_demo-esdfziafxxuktbbbrlqhqjrjosdu/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		0198DE091F032A1A003920C3 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = "../../Library/Developer/Xcode/DerivedData/mim_demo-esdfziafxxuktbbbrlqhqjrjosdu/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework"; sourceTree = "<group>"; };
 		019986B01EEEA1C1003D3664 /* InstrumentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentManager.swift; sourceTree = "<group>"; };
 		2AEAD2B396598E5B9ED0CE98 /* Pods-mim demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mim demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mim demo/Pods-mim demo.debug.xcconfig"; sourceTree = "<group>"; };
+		4BAEC23591BAD39000ACD637 /* Pods_mim_demo_tv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mim_demo_tv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		604D4E4D297F16D3142396E9 /* Pods-mim demo tv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mim demo tv.release.xcconfig"; path = "Pods/Target Support Files/Pods-mim demo tv/Pods-mim demo tv.release.xcconfig"; sourceTree = "<group>"; };
 		6788E59DC4B334BC2CAE77FF /* Pods_mim_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mim_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0D84DDF8E78C106C8BFFE8A /* Pods-mim demo tv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mim demo tv.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mim demo tv/Pods-mim demo tv.debug.xcconfig"; sourceTree = "<group>"; };
 		E45C6A05AC94E45AA83FBDA8 /* Pods-mim demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mim demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-mim demo/Pods-mim demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +65,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99B2774DE10E4B1E77923871 /* Pods_mim_demo.framework in Frameworks */,
+				011A368B1F032F8100DFC0E6 /* Pods_mim_demo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0198DDF11F03288B003920C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				011A368A1F032F4C00DFC0E6 /* Pods_mim_demo_tv.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				0141C2751EAB739A00DB8A17 /* mim demo */,
+				0198DDF51F03288B003920C3 /* mim demo tv */,
 				0141C2741EAB739A00DB8A17 /* Products */,
 				C2E7FB434B999DFD9DC58C5F /* Pods */,
 				E057BFDDD2FF4E9E0EEA2755 /* Frameworks */,
@@ -65,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				0141C2731EAB739A00DB8A17 /* mim demo.app */,
+				0198DDF41F03288B003920C3 /* mim demo tv.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +119,17 @@
 			path = "mim demo";
 			sourceTree = "<group>";
 		};
+		0198DDF51F03288B003920C3 /* mim demo tv */ = {
+			isa = PBXGroup;
+			children = (
+				0198DDF61F03288B003920C3 /* AppDelegate.swift */,
+				0198DDFA1F03288B003920C3 /* Main.storyboard */,
+				0198DDFD1F03288C003920C3 /* Assets.xcassets */,
+				0198DDFF1F03288C003920C3 /* Info.plist */,
+			);
+			path = "mim demo tv";
+			sourceTree = "<group>";
+		};
 		019986AF1EEEA184003D3664 /* InstrumentManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +143,8 @@
 			children = (
 				2AEAD2B396598E5B9ED0CE98 /* Pods-mim demo.debug.xcconfig */,
 				E45C6A05AC94E45AA83FBDA8 /* Pods-mim demo.release.xcconfig */,
+				B0D84DDF8E78C106C8BFFE8A /* Pods-mim demo tv.debug.xcconfig */,
+				604D4E4D297F16D3142396E9 /* Pods-mim demo tv.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -108,7 +152,12 @@
 		E057BFDDD2FF4E9E0EEA2755 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				011A36891F032F4C00DFC0E6 /* Pods_mim_demo_tv.framework */,
+				0198DE081F032A1A003920C3 /* Alamofire.framework */,
+				0198DE091F032A1A003920C3 /* CocoaAsyncSocket.framework */,
+				0198DE061F032A09003920C3 /* Pods_mim_demo.framework */,
 				6788E59DC4B334BC2CAE77FF /* Pods_mim_demo.framework */,
+				4BAEC23591BAD39000ACD637 /* Pods_mim_demo_tv.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +185,26 @@
 			productReference = 0141C2731EAB739A00DB8A17 /* mim demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0198DDF31F03288B003920C3 /* mim demo tv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0198DE021F03288C003920C3 /* Build configuration list for PBXNativeTarget "mim demo tv" */;
+			buildPhases = (
+				203E4CCB0FE0733DB42DD0A1 /* [CP] Check Pods Manifest.lock */,
+				0198DDF01F03288B003920C3 /* Sources */,
+				0198DDF11F03288B003920C3 /* Frameworks */,
+				0198DDF21F03288B003920C3 /* Resources */,
+				7F50B104F9E0418D00C27551 /* [CP] Embed Pods Frameworks */,
+				B59141684153D879F2E9141E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mim demo tv";
+			productName = "mim demo tv";
+			productReference = 0198DDF41F03288B003920C3 /* mim demo tv.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -156,6 +225,11 @@
 							};
 						};
 					};
+					0198DDF31F03288B003920C3 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6AP8DGBG6H;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 0141C26E1EAB739A00DB8A17 /* Build configuration list for PBXProject "mim demo" */;
@@ -172,6 +246,7 @@
 			projectRoot = "";
 			targets = (
 				0141C2721EAB739A00DB8A17 /* mim demo */,
+				0198DDF31F03288B003920C3 /* mim demo tv */,
 			);
 		};
 /* End PBXProject section */
@@ -187,9 +262,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0198DDF21F03288B003920C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0198DDFE1F03288C003920C3 /* Assets.xcassets in Resources */,
+				0198DDFC1F03288B003920C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		203E4CCB0FE0733DB42DD0A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		21706A55CF01B634369D84C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,6 +317,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mim demo/Pods-mim demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F50B104F9E0418D00C27551 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mim demo tv/Pods-mim demo tv-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B59141684153D879F2E9141E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mim demo tv/Pods-mim demo tv-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C74AD0473E9DEBA8DE214280 /* [CP] Copy Pods Resources */ = {
@@ -252,6 +381,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0198DDF01F03288B003920C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				011A368C1F0331D700DFC0E6 /* InstrumentCollectionViewController.swift in Sources */,
+				0121FDED1F032D270028FFE1 /* InstrumentViewController.swift in Sources */,
+				0121FDEB1F032CDF0028FFE1 /* InstrumentInfoViewController.swift in Sources */,
+				0121FDEC1F032CDF0028FFE1 /* SignalsTableViewController.swift in Sources */,
+				0198DE041F032959003920C3 /* InstrumentManager.swift in Sources */,
+				0198DDF71F03288B003920C3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -269,6 +411,14 @@
 				0141C2801EAB739A00DB8A17 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0198DDFA1F03288B003920C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0198DDFB1F03288B003920C3 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -404,6 +554,42 @@
 			};
 			name = Release;
 		};
+		0198DE001F03288C003920C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0D84DDF8E78C106C8BFFE8A /* Pods-mim demo tv.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 6AP8DGBG6H;
+				INFOPLIST_FILE = "mim demo tv/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.objectthink.mim.demo.mim-demo-tv";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		0198DE011F03288C003920C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 604D4E4D297F16D3142396E9 /* Pods-mim demo tv.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 6AP8DGBG6H;
+				INFOPLIST_FILE = "mim demo tv/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.objectthink.mim.demo.mim-demo-tv";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -421,6 +607,15 @@
 			buildConfigurations = (
 				0141C2861EAB739A00DB8A17 /* Debug */,
 				0141C2871EAB739A00DB8A17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0198DE021F03288C003920C3 /* Build configuration list for PBXNativeTarget "mim demo tv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0198DE001F03288C003920C3 /* Debug */,
+				0198DE011F03288C003920C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

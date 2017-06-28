@@ -36,6 +36,7 @@ class InstrumentCollectionViewController: UICollectionViewController, Instrument
       //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
       
       // Do any additional setup after loading the view.
+      
       self.collectionView?.delegate = self
       
       app = UIApplication.shared.delegate as? AppDelegate;
@@ -95,6 +96,8 @@ class InstrumentCollectionViewController: UICollectionViewController, Instrument
          cell.imageView.image = UIImage(named: "tga")
       }
 
+      //cell.imageView.adjustsImageWhenAncestorFocused = true
+      
       return cell
    }
    
@@ -115,6 +118,7 @@ class InstrumentCollectionViewController: UICollectionViewController, Instrument
       
    }
    
+
    // MARK: UICollectionViewDelegate
    
    /*
