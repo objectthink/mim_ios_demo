@@ -43,7 +43,7 @@ class SignalsTableViewController: UITableViewController, InstrumentDelegate {
    {
       i += 1
       
-      if i % 2 == 0
+      if i % 1 == 0
       {
          signals = instrument?.realtimeSignals
          //tableView.reloadData()

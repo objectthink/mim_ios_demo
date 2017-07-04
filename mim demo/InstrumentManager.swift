@@ -28,11 +28,15 @@ class Instrument
    var heartbeat:String? //instrument unique identifier
    {
       didSet{
-         instrumentManager?.subscribe(subject: "\(heartbeat ?? "").realtimesignalsstatus", callback: { (payload) in
+         
+         instrumentManager?.subscribe(subject: "\(heartbeat ?? "").realtimesignalsstatus", callback:
+         { (payload) in
             //print(payload)
             do {
+               //print("realtimesignals:\(self.name ?? "unknown")")
                
-               self.realtimeSignals = try JSONSerialization.jsonObject(with: payload.data(using: .utf8)!) as? [[String:Any]]
+               self.realtimeSignals =
+                  try JSONSerialization.jsonObject(with: payload.data(using: .utf8)!) as? [[String:Any]]
                
                if self.delegate != nil
                {
@@ -43,6 +47,21 @@ class Instrument
                print(error)
             }
          })
+         
+         
+         instrumentManager?.subscribe(subject: "\(heartbeat ?? "").runstate", callback:
+         { (payload) in
+            do
+            {
+               print("runstate:\(self.name ?? "unknown") \(payload)")
+                  
+               if self.delegate != nil
+               {
+                  self.delegate?.notify(hint: "runstate")
+               }
+            }
+         })
+
       }
    }
    
@@ -120,7 +139,10 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
       
       super.init()
       
-      _socket = GCDAsyncSocket.init(delegate: self, delegateQueue: DispatchQueue.main)
+      let dq = DispatchQueue(label: "tadispatchqueue")
+      _socket = GCDAsyncSocket.init(delegate: self, delegateQueue: dq, socketQueue: dq)
+      
+      //_socket = GCDAsyncSocket.init(delegate: self, delegateQueue: DispatchQueue.main)
       
       
       do
@@ -317,12 +339,23 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
       print("connected: \(host)")
       
       let end = "\r\n"
+      //let ping = "PING"
 
       let heartbeat_sub = "SUB heartbeat 1\r\n"
+
+      //let test_sub = "SUB 00:19:b8:02:ab:c1.realtimesignalsstatus 2\r\n"
       
-      _socket?.readData(to: Data(bytes: Array(end.utf8)), withTimeout: -1, tag: 8)
+      _socket?.readData(to: Data(bytes: Array(end.utf8)), withTimeout: -1, tag: 88)
+      _socket?.readData(to: Data(bytes: Array(end.utf8)), withTimeout: -1, tag: 88)
+      _socket?.readData(to: Data(bytes: Array(end.utf8)), withTimeout: -1, tag: 88)
+      _socket?.readData(to: Data(bytes: Array(end.utf8)), withTimeout: -1, tag: 88)
+      
+      //_socket?.readData(to: Data(bytes: Array(ping.utf8)), withTimeout: -1, tag: 77)
+      //_socket?.readData(to: Data(bytes: Array(ping.utf8)), withTimeout: -1, tag: 77)
 
       _socket?.write(Data(bytes: Array(heartbeat_sub.utf8)), withTimeout: -1, tag: 9)
+      
+      //_socket?.write(Data(bytes: Array(test_sub.utf8)), withTimeout: -1, tag: 9)
    }
    
    var _message:String = ""
@@ -336,15 +369,26 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
       
       let end = "\r\n"
       
-      if (s?.hasPrefix("PING"))!
+      //let ping = "PING"
+      
+      _socket?.readData(to: Data(bytes: Array(end.utf8)), withTimeout: -1, tag: 88)
+      _socket?.readData(to: Data(bytes: Array(end.utf8)), withTimeout: -1, tag: 88)
+
+      //_socket?.readData(to: Data(bytes: Array(ping.utf8)), withTimeout: -1, tag: 77)
+
+      if (s?.contains("PING"))!
+      //if(tag == 77)
       {
+         print(s!)
+         print("PONG")
+         
          _socket?.write(Data(bytes: Array(pong.utf8)), withTimeout: -1, tag: 9)
       }
-      
-      //NEED TO PROCESS WHOLE MESSAGES
-      
-      
-      if(s?.hasPrefix("MSG"))!
+      else if(s?.hasPrefix("+OK"))!
+      {
+         //print(s!)
+      }
+      else if(s?.hasPrefix("MSG"))!
       {
          _message = s!
       }else if _message.hasPrefix("MSG")
@@ -353,24 +397,8 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
          processMSG(msg: _message)
       }
       
-      _socket?.readData(to: Data(bytes: Array(end.utf8)), withTimeout: -1, tag: 8)
+      //_socket?.readData(to: Data(bytes: Array(end.utf8)), withTimeout: -1, tag: 8)
    }
    
-   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-      // Override point for customization after application launch.
-      _socket = GCDAsyncSocket.init(delegate: self, delegateQueue: DispatchQueue.main)
-      
-      do
-      {
-         try _socket?.connect(toHost: "52.203.231.127", onPort: 4222)
-      }
-      catch
-      {
-         print(error.localizedDescription)
-      }
-      
-      
-      return true
-   }
 }
 

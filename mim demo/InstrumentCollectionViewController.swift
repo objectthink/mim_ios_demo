@@ -41,7 +41,8 @@ class InstrumentCollectionViewController: UICollectionViewController, Instrument
       
       app = UIApplication.shared.delegate as? AppDelegate;
       
-      instrumentManager = app?._instrumentManager!;
+      //instrumentManager = app?._instrumentManager!;
+      instrumentManager = InstrumentManager(ip: "52.203.231.127", port: 4222)
       instrumentManager?.delegate = self
    }
    
