@@ -14,21 +14,21 @@
 		0A8FCD5E9A88EFCD3B181CA5E6FD3F9D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3A1B49BA320B18336C77BA6A6E3880 /* CFNetwork.framework */; };
 		140B7ADE1086C3CAF8825592990F3591 /* Pods-mim demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60888E4016427B471315BE8C54601F /* Pods-mim demo-dummy.m */; };
 		16F6F17E8CCE8B7F80912DF555BA142B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6363496EA8F0C723B4E66ECB5D191C /* Security.framework */; };
-		2472D41AC54C1C68DD015B704E5B2FFC /* CocoaAsyncSocket-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B72A893D1DB76A3D548057F308FBD951 /* CocoaAsyncSocket-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2472D41AC54C1C68DD015B704E5B2FFC /* CocoaAsyncSocket-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28BD37011FC41FE05057615497572C93 /* CocoaAsyncSocket-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25E8D489333AF99606E86EECFC1DEE1D /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 1980EC5DEEC9F2D7D101E28E862EA93B /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29563E581C50753801C2BD34435DB608 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A15F51371F1F5528741CF6332A00D30 /* DispatchQueue+Alamofire.swift */; };
 		29AB9EF32A5156B69515AEA498055194 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50EED81AC44822FD287867D613D8D6F /* Foundation.framework */; };
-		2CE0939239CE7E003EABC740D3894CED /* Alamofire-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E18F7F65AC3D7BB832E805ABCE414 /* Alamofire-iOS-dummy.m */; };
+		2CE0939239CE7E003EABC740D3894CED /* Alamofire-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 896702F9A619E3F95E29A1D82D2EE638 /* Alamofire-iOS-dummy.m */; };
 		3FC7CC3B96246D4F825C6C8279CEC5DA /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124BE2E86E76EAD549712A772BCF0162 /* Alamofire.swift */; };
 		401FDE6EBE82B52DA19FC1D97B1E89FB /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9144C3A1F387AB04D0C3329C292264 /* SessionManager.swift */; };
-		41399A1E3D3BB00E5C3796A136800BB2 /* Alamofire-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 485B8FAE74CB682B01F80DEE75C50F07 /* Alamofire-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41399A1E3D3BB00E5C3796A136800BB2 /* Alamofire-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF18CFE56AE28CD9DC2F1F0A6514E829 /* Alamofire-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45B48F6630BEAABF4A289BF39AAB055C /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4890C8051C47BEBC5E93A6E0A147367 /* ResponseSerialization.swift */; };
 		4AA90034CB7081883338405307C25B82 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB043F906D29AF0ADAF59436F52E6B6 /* SessionDelegate.swift */; };
 		4AD9400617A3C3E3E9FB8FAE8FDEF6EE /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F205A24B5AB3311C24D98DA718630900 /* Timeline.swift */; };
 		4B1868708B50CD219FCDEDF785A7B2BC /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3314E3DE72BBAB897E1A206C2E3E80 /* TaskDelegate.swift */; };
 		4F3595D2B044B3F97C1237418FC681BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1FD9035B64CFC27E7D9C8E8B0142CA /* Foundation.framework */; };
 		504A94D62CEF102E0B4616D7BDDAF01E /* Pods-mim demo tv-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AED5AE30AD975D5CA4CFE333B0103E85 /* Pods-mim demo tv-dummy.m */; };
-		50B3936BD92D0A8416184D4BDE0C0AE2 /* Alamofire-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1F4F1A1B3D64079C73834F5406B1F6 /* Alamofire-tvOS-dummy.m */; };
+		50B3936BD92D0A8416184D4BDE0C0AE2 /* Alamofire-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CB8FB44DBB51BB0EB2502C738C6CB3 /* Alamofire-tvOS-dummy.m */; };
 		5819C72B6A933289591AF5E380AA981E /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A222F66B5C58C064BF56253CB3BECB5 /* ServerTrustPolicy.swift */; };
 		5DF116EA39A8EB315EA65160D6BB9DF0 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB043F906D29AF0ADAF59436F52E6B6 /* SessionDelegate.swift */; };
 		60E718C7805BADA8B6F09057D0D0C41A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71FD8E736F0303E5D77F2271F62DA1 /* Response.swift */; };
@@ -42,12 +42,12 @@
 		7BA18EA41D39E9A20DDBE4C07009A825 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F205A24B5AB3311C24D98DA718630900 /* Timeline.swift */; };
 		827BF036AD9C799D02B31DF1C9A4BED7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3013CC8F7B061DB4380651353CB9054B /* NetworkReachabilityManager.swift */; };
 		847DB548A2895A814F06FC3969B2AF34 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0073232012BE2078B69569C28E41BDAC /* Result.swift */; };
-		87EBF0D206EC659B1773DD2A26E97268 /* CocoaAsyncSocket-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47B8BD74609ADC60EE79613CFF79D605 /* CocoaAsyncSocket-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87EBF0D206EC659B1773DD2A26E97268 /* CocoaAsyncSocket-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 843A4AD8FDB4421C371B51101C144C2B /* CocoaAsyncSocket-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88CA90C8DDA2A5473AD16F3CFC325064 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = AF24DC2EC0ACB68B0D42234B2E7FEE98 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C5C832A068C4910D434C55FB76CD687 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652913B0D4EFC818E4E7ACAE9845A268 /* ParameterEncoding.swift */; };
 		8FA936C50C1CD7B4EC196B167BA04B61 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0073232012BE2078B69569C28E41BDAC /* Result.swift */; };
 		9C2D70F1E462CE75FB1475AD53A6249F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8275D302B9B529251EE630CAF22775 /* Request.swift */; };
-		9CC560F8BDCD06A56813FF6B38B67043 /* CocoaAsyncSocket-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E2AC8DE3D1C83047CB5A262B2F288 /* CocoaAsyncSocket-tvOS-dummy.m */; };
+		9CC560F8BDCD06A56813FF6B38B67043 /* CocoaAsyncSocket-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5012ABAB6C54F73AF68E2566C1DBFCB6 /* CocoaAsyncSocket-tvOS-dummy.m */; };
 		A07BBB97FF332B7FE27B3F7CC015CDC4 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A222F66B5C58C064BF56253CB3BECB5 /* ServerTrustPolicy.swift */; };
 		A1BA28434ABC4D98872C9064A24AA18B /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282F4784E764A55015B4324EA4317E52 /* Validation.swift */; };
 		A521BCA43E726E5C3C56948C20704830 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EC0771055EDD8A54F1EAFB49EA595F /* GCDAsyncSocket.m */; };
@@ -55,8 +55,8 @@
 		A9F865046BCD50D82F21FC0CBDC46077 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652913B0D4EFC818E4E7ACAE9845A268 /* ParameterEncoding.swift */; };
 		AA06B0B4EA5A92394B65F05B7AFA7383 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 1980EC5DEEC9F2D7D101E28E862EA93B /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABB296AAD9EEF7DFECFD8A4DD651DD16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1FD9035B64CFC27E7D9C8E8B0142CA /* Foundation.framework */; };
-		ADB0811351D06465E723CEE6BF0E5DE3 /* Alamofire-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4228DE4B68E176CD46D295F3FB6A559D /* Alamofire-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4A9B9ADC752DADBAC6CDC4876E575C6 /* CocoaAsyncSocket-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C485D6B0F5E47AF1865862C645A2086 /* CocoaAsyncSocket-iOS-dummy.m */; };
+		ADB0811351D06465E723CEE6BF0E5DE3 /* Alamofire-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F33A9CA69E76B1D5A51CF826C0944C6 /* Alamofire-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4A9B9ADC752DADBAC6CDC4876E575C6 /* CocoaAsyncSocket-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B238B1D5C9FEC698A502B4CD66737EDF /* CocoaAsyncSocket-iOS-dummy.m */; };
 		B9D4E4A35B95788AD61F64D550826424 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8275D302B9B529251EE630CAF22775 /* Request.swift */; };
 		BDC702B77200C1C9E8D2EFC296A8EBFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D50EED81AC44822FD287867D613D8D6F /* Foundation.framework */; };
 		C08E9F09701B2FF36088560A0BA4233B /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3013CC8F7B061DB4380651353CB9054B /* NetworkReachabilityManager.swift */; };
@@ -105,82 +105,82 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00093F0F1B8657215327C79DD09DD1B3 /* Alamofire-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Alamofire-tvOS.xcconfig"; path = "../Alamofire-tvOS/Alamofire-tvOS.xcconfig"; sourceTree = "<group>"; };
 		0073232012BE2078B69569C28E41BDAC /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		0DC390DB4D5D05C3A877A20F31588C38 /* Pods-mim demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mim demo-frameworks.sh"; sourceTree = "<group>"; };
-		0DEF70EE102037E7EB9982E051130BF0 /* CocoaAsyncSocket-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CocoaAsyncSocket-tvOS-prefix.pch"; path = "../CocoaAsyncSocket-tvOS/CocoaAsyncSocket-tvOS-prefix.pch"; sourceTree = "<group>"; };
 		100D73A8A44D4DF029204744CD44A429 /* Pods-mim demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mim demo.debug.xcconfig"; sourceTree = "<group>"; };
 		124BE2E86E76EAD549712A772BCF0162 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		1266A44906BA5B5A1356B9C52A385E19 /* Pods-mim demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mim demo-resources.sh"; sourceTree = "<group>"; };
 		12EC0771055EDD8A54F1EAFB49EA595F /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
-		163F2FD32C0486FF9413D577AEDF03B5 /* CocoaAsyncSocket-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "CocoaAsyncSocket-iOS.modulemap"; sourceTree = "<group>"; };
 		1980EC5DEEC9F2D7D101E28E862EA93B /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		1C485D6B0F5E47AF1865862C645A2086 /* CocoaAsyncSocket-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-iOS-dummy.m"; sourceTree = "<group>"; };
 		1F9144C3A1F387AB04D0C3329C292264 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		22539016D12892A008760EA60D802781 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		230E452F073B69866EA0F17D7E360218 /* CocoaAsyncSocket-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "CocoaAsyncSocket-tvOS.xcconfig"; path = "../CocoaAsyncSocket-tvOS/CocoaAsyncSocket-tvOS.xcconfig"; sourceTree = "<group>"; };
 		282F4784E764A55015B4324EA4317E52 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		28BD37011FC41FE05057615497572C93 /* CocoaAsyncSocket-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CocoaAsyncSocket-tvOS-umbrella.h"; path = "../CocoaAsyncSocket-tvOS/CocoaAsyncSocket-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		2BB043F906D29AF0ADAF59436F52E6B6 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		2F6363496EA8F0C723B4E66ECB5D191C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		3013CC8F7B061DB4380651353CB9054B /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		378E2AC8DE3D1C83047CB5A262B2F288 /* CocoaAsyncSocket-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CocoaAsyncSocket-tvOS-dummy.m"; path = "../CocoaAsyncSocket-tvOS/CocoaAsyncSocket-tvOS-dummy.m"; sourceTree = "<group>"; };
-		37E2F09999102727C0E5F6C6E4595A82 /* CocoaAsyncSocket-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CocoaAsyncSocket-iOS.xcconfig"; sourceTree = "<group>"; };
-		3950083EBDAE423F89002973403F9CB6 /* Alamofire-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-iOS-prefix.pch"; sourceTree = "<group>"; };
 		3B261B7346EA62979DB487228DDDC7B4 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = "Alamofire-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D391985B271795FDE81F69704596714 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EE40B4DFAA3A201972B278471BC4CE8 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		4228DE4B68E176CD46D295F3FB6A559D /* Alamofire-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-tvOS-umbrella.h"; path = "../Alamofire-tvOS/Alamofire-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		3F33A9CA69E76B1D5A51CF826C0944C6 /* Alamofire-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-tvOS-umbrella.h"; path = "../Alamofire-tvOS/Alamofire-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		41D19D8FEDA834BC105114753F0EB69B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41FAFE06D668907627D292E85FBF9250 /* Alamofire-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Alamofire-iOS.modulemap"; sourceTree = "<group>"; };
 		436DC99341214F63AD6C530B9C524D9D /* Pods-mim demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mim demo.release.xcconfig"; sourceTree = "<group>"; };
-		47B8BD74609ADC60EE79613CFF79D605 /* CocoaAsyncSocket-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-iOS-umbrella.h"; sourceTree = "<group>"; };
-		485B8FAE74CB682B01F80DEE75C50F07 /* Alamofire-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-iOS-umbrella.h"; sourceTree = "<group>"; };
+		466478B1BE2094E7CBCC03AF1608A4A6 /* CocoaAsyncSocket-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "CocoaAsyncSocket-iOS.modulemap"; sourceTree = "<group>"; };
 		4A222F66B5C58C064BF56253CB3BECB5 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		4E05F1F0D383A631974B722D5D402F4C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E777B549B320F40E12113488ED66B14 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Alamofire-tvOS/Info.plist"; sourceTree = "<group>"; };
+		4E3359397E3FF5BB96FB681E405EE747 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Alamofire-tvOS/Info.plist"; sourceTree = "<group>"; };
+		4E896B40A866FD6A092D68D7763F5557 /* Alamofire-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Alamofire-tvOS.xcconfig"; path = "../Alamofire-tvOS/Alamofire-tvOS.xcconfig"; sourceTree = "<group>"; };
+		5012ABAB6C54F73AF68E2566C1DBFCB6 /* CocoaAsyncSocket-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CocoaAsyncSocket-tvOS-dummy.m"; path = "../CocoaAsyncSocket-tvOS/CocoaAsyncSocket-tvOS-dummy.m"; sourceTree = "<group>"; };
 		51B7E10E428D813AACD0C7716BBB1EDF /* Pods-mim demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mim demo-umbrella.h"; sourceTree = "<group>"; };
+		5346ACB2C0C3DD379C608CA61A78E41B /* Alamofire-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "Alamofire-tvOS.modulemap"; path = "../Alamofire-tvOS/Alamofire-tvOS.modulemap"; sourceTree = "<group>"; };
 		59424044D1E5F87F4E2920D00E694819 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = "CocoaAsyncSocket-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D104859104359D3C084AF72B566DD8F /* Alamofire-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "Alamofire-tvOS.modulemap"; path = "../Alamofire-tvOS/Alamofire-tvOS.modulemap"; sourceTree = "<group>"; };
 		5D1CBFB1337E14007F67EED795299E52 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		5D1ED298080ABB0F3F9D2AD191C82E08 /* Alamofire-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-iOS-prefix.pch"; sourceTree = "<group>"; };
 		5F8275D302B9B529251EE630CAF22775 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		632A4FF67ADF059D977C0BFC4E5A7A5D /* CocoaAsyncSocket-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-iOS-prefix.pch"; sourceTree = "<group>"; };
 		652913B0D4EFC818E4E7ACAE9845A268 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		6A028644EA519D7E4B3A47ED4DDEF1D7 /* Pods-mim demo tv-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mim demo tv-acknowledgements.plist"; sourceTree = "<group>"; };
-		6A0858459357C205867E99D9A92C882D /* CocoaAsyncSocket-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "CocoaAsyncSocket-tvOS.modulemap"; path = "../CocoaAsyncSocket-tvOS/CocoaAsyncSocket-tvOS.modulemap"; sourceTree = "<group>"; };
 		6A71FD8E736F0303E5D77F2271F62DA1 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		6F4C902FFDBEC636CD9034FFEF315CF5 /* Alamofire-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Alamofire-iOS.xcconfig"; sourceTree = "<group>"; };
 		6F7A9D1A656534D407276CDEDF88054B /* Pods-mim demo tv-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mim demo tv-resources.sh"; sourceTree = "<group>"; };
-		760D0AC0803292B866A8AF22844F275D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		818E78CD4670382B3A967288812C7F72 /* CocoaAsyncSocket-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "CocoaAsyncSocket-tvOS.modulemap"; path = "../CocoaAsyncSocket-tvOS/CocoaAsyncSocket-tvOS.modulemap"; sourceTree = "<group>"; };
 		8407910D2DFD7AA78DBDE86191E3F9D1 /* Pods-mim demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mim demo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		843A4AD8FDB4421C371B51101C144C2B /* CocoaAsyncSocket-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-iOS-umbrella.h"; sourceTree = "<group>"; };
+		896702F9A619E3F95E29A1D82D2EE638 /* Alamofire-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-iOS-dummy.m"; sourceTree = "<group>"; };
 		8A15F51371F1F5528741CF6332A00D30 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		8C69F591DD8583A2BB3532CA8173E0F9 /* Pods-mim demo tv-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mim demo tv-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9C0E18F7F65AC3D7BB832E805ABCE414 /* Alamofire-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-iOS-dummy.m"; sourceTree = "<group>"; };
 		A0C554905537EB2E889FC47476519735 /* Pods_mim_demo_tv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_mim_demo_tv.framework; path = "Pods-mim demo tv.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8553691BBF0E2888FED5F883EEC8395 /* Pods_mim_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_mim_demo.framework; path = "Pods-mim demo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED5AE30AD975D5CA4CFE333B0103E85 /* Pods-mim demo tv-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mim demo tv-dummy.m"; sourceTree = "<group>"; };
 		AF24DC2EC0ACB68B0D42234B2E7FEE98 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		AF60888E4016427B471315BE8C54601F /* Pods-mim demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mim demo-dummy.m"; sourceTree = "<group>"; };
 		B0F3E74D3A2ACCFE57F3DCB2BCF4B815 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		B238B1D5C9FEC698A502B4CD66737EDF /* CocoaAsyncSocket-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-iOS-dummy.m"; sourceTree = "<group>"; };
+		B2A0B51621F8D1B1D7D90DF84B7BBA70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B633653965F293383582F1796FCCB61B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = "Alamofire-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B720B0C8CB56ED5F85C1BBE18F0872A6 /* Alamofire-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-tvOS-prefix.pch"; path = "../Alamofire-tvOS/Alamofire-tvOS-prefix.pch"; sourceTree = "<group>"; };
-		B72A893D1DB76A3D548057F308FBD951 /* CocoaAsyncSocket-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CocoaAsyncSocket-tvOS-umbrella.h"; path = "../CocoaAsyncSocket-tvOS/CocoaAsyncSocket-tvOS-umbrella.h"; sourceTree = "<group>"; };
-		B9D9EBA13272E441E896D00908BDA37D /* Alamofire-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Alamofire-iOS.modulemap"; sourceTree = "<group>"; };
 		BB683BF444421004C9525B7868A02D4B /* Pods-mim demo tv-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mim demo tv-frameworks.sh"; sourceTree = "<group>"; };
+		C1527E8FB60D1AE2DC2891801BD96A60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../CocoaAsyncSocket-tvOS/Info.plist"; sourceTree = "<group>"; };
 		C407005707210AA786AD927634E51ED1 /* Pods-mim demo tv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mim demo tv.release.xcconfig"; sourceTree = "<group>"; };
-		CB1F4F1A1B3D64079C73834F5406B1F6 /* Alamofire-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Alamofire-tvOS-dummy.m"; path = "../Alamofire-tvOS/Alamofire-tvOS-dummy.m"; sourceTree = "<group>"; };
-		CC84BCD9C127DBE82A16175FC89AA83C /* CocoaAsyncSocket-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "CocoaAsyncSocket-tvOS.xcconfig"; path = "../CocoaAsyncSocket-tvOS/CocoaAsyncSocket-tvOS.xcconfig"; sourceTree = "<group>"; };
-		CE1F525882CEB7249CC81A0DAE23A436 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../CocoaAsyncSocket-tvOS/Info.plist"; sourceTree = "<group>"; };
 		CE3314E3DE72BBAB897E1A206C2E3E80 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		CEA07B5701BE3B38C0AE731DCD30F2FA /* Alamofire-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-tvOS-prefix.pch"; path = "../Alamofire-tvOS/Alamofire-tvOS-prefix.pch"; sourceTree = "<group>"; };
+		CF18CFE56AE28CD9DC2F1F0A6514E829 /* Alamofire-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-iOS-umbrella.h"; sourceTree = "<group>"; };
 		D50EED81AC44822FD287867D613D8D6F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DBE0FEE3DE9422917EEE219B778FA067 /* Pods-mim demo tv-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mim demo tv-umbrella.h"; sourceTree = "<group>"; };
 		DDA1534F963634031C47563BC7A42BA5 /* Pods-mim demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-mim demo.modulemap"; sourceTree = "<group>"; };
 		DE5835F3BDF9D36710C394ACF35817AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4890C8051C47BEBC5E93A6E0A147367 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		EB04EF2F0336DC0FADBBE904854560C1 /* CocoaAsyncSocket-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CocoaAsyncSocket-tvOS-prefix.pch"; path = "../CocoaAsyncSocket-tvOS/CocoaAsyncSocket-tvOS-prefix.pch"; sourceTree = "<group>"; };
 		EB79653D990B9B3E34F657A2AB899FB0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		EC9314756F28181BA5B45A098E8FBA5A /* CocoaAsyncSocket-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-iOS-prefix.pch"; sourceTree = "<group>"; };
 		ED6FCEA55FA8ECBD41106EC6D022ACC8 /* Pods-mim demo tv.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-mim demo tv.modulemap"; sourceTree = "<group>"; };
 		EDC6222B41EDC4556A37AA3A8EF18DE3 /* Pods-mim demo tv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mim demo tv.debug.xcconfig"; sourceTree = "<group>"; };
 		EDF0252B5445D49F586BF34F5E795D6D /* Pods-mim demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mim demo-acknowledgements.plist"; sourceTree = "<group>"; };
+		EF2E8CA4D949E990BB74080A6B5B9198 /* Alamofire-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Alamofire-iOS.xcconfig"; sourceTree = "<group>"; };
 		F1AFA299F12086A17225DADA36D43677 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		F205A24B5AB3311C24D98DA718630900 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		F9CB8FB44DBB51BB0EB2502C738C6CB3 /* Alamofire-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Alamofire-tvOS-dummy.m"; path = "../Alamofire-tvOS/Alamofire-tvOS-dummy.m"; sourceTree = "<group>"; };
 		FA92B025D0B96228F7B5FAD3D23C54D9 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = "CocoaAsyncSocket-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2BCC244D06C90145CBD38AECBA1E29 /* CocoaAsyncSocket-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CocoaAsyncSocket-iOS.xcconfig"; sourceTree = "<group>"; };
 		FD1FD9035B64CFC27E7D9C8E8B0142CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		FD3A1B49BA320B18336C77BA6A6E3880 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -268,26 +268,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		282EA608589E6ED0A9B70EFC0BDD0175 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B9D9EBA13272E441E896D00908BDA37D /* Alamofire-iOS.modulemap */,
-				6F4C902FFDBEC636CD9034FFEF315CF5 /* Alamofire-iOS.xcconfig */,
-				9C0E18F7F65AC3D7BB832E805ABCE414 /* Alamofire-iOS-dummy.m */,
-				3950083EBDAE423F89002973403F9CB6 /* Alamofire-iOS-prefix.pch */,
-				485B8FAE74CB682B01F80DEE75C50F07 /* Alamofire-iOS-umbrella.h */,
-				5D104859104359D3C084AF72B566DD8F /* Alamofire-tvOS.modulemap */,
-				00093F0F1B8657215327C79DD09DD1B3 /* Alamofire-tvOS.xcconfig */,
-				CB1F4F1A1B3D64079C73834F5406B1F6 /* Alamofire-tvOS-dummy.m */,
-				B720B0C8CB56ED5F85C1BBE18F0872A6 /* Alamofire-tvOS-prefix.pch */,
-				4228DE4B68E176CD46D295F3FB6A559D /* Alamofire-tvOS-umbrella.h */,
-				4E777B549B320F40E12113488ED66B14 /* Info.plist */,
-				760D0AC0803292B866A8AF22844F275D /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Alamofire-iOS";
-			sourceTree = "<group>";
-		};
 		35825BE22106259B59D1684776CF3A4F /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +276,26 @@
 				2F6363496EA8F0C723B4E66ECB5D191C /* Security.framework */,
 			);
 			name = tvOS;
+			sourceTree = "<group>";
+		};
+		3A46C5AC466B2A93C8D83B2332D685A3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				466478B1BE2094E7CBCC03AF1608A4A6 /* CocoaAsyncSocket-iOS.modulemap */,
+				FB2BCC244D06C90145CBD38AECBA1E29 /* CocoaAsyncSocket-iOS.xcconfig */,
+				B238B1D5C9FEC698A502B4CD66737EDF /* CocoaAsyncSocket-iOS-dummy.m */,
+				632A4FF67ADF059D977C0BFC4E5A7A5D /* CocoaAsyncSocket-iOS-prefix.pch */,
+				843A4AD8FDB4421C371B51101C144C2B /* CocoaAsyncSocket-iOS-umbrella.h */,
+				818E78CD4670382B3A967288812C7F72 /* CocoaAsyncSocket-tvOS.modulemap */,
+				230E452F073B69866EA0F17D7E360218 /* CocoaAsyncSocket-tvOS.xcconfig */,
+				5012ABAB6C54F73AF68E2566C1DBFCB6 /* CocoaAsyncSocket-tvOS-dummy.m */,
+				EB04EF2F0336DC0FADBBE904854560C1 /* CocoaAsyncSocket-tvOS-prefix.pch */,
+				28BD37011FC41FE05057615497572C93 /* CocoaAsyncSocket-tvOS-umbrella.h */,
+				41D19D8FEDA834BC105114753F0EB69B /* Info.plist */,
+				C1527E8FB60D1AE2DC2891801BD96A60 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CocoaAsyncSocket-iOS";
 			sourceTree = "<group>";
 		};
 		5B5410D6DA0DECDB95D153E70796A9E8 /* Pods-mim demo tv */ = {
@@ -378,30 +378,30 @@
 				CE3314E3DE72BBAB897E1A206C2E3E80 /* TaskDelegate.swift */,
 				F205A24B5AB3311C24D98DA718630900 /* Timeline.swift */,
 				282F4784E764A55015B4324EA4317E52 /* Validation.swift */,
-				282EA608589E6ED0A9B70EFC0BDD0175 /* Support Files */,
+				C0ED9A89A96015A4EC54CAF95FC32DE7 /* Support Files */,
 			);
 			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		E384B5F94B546E284B48EE76DD994EF3 /* Support Files */ = {
+		C0ED9A89A96015A4EC54CAF95FC32DE7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				163F2FD32C0486FF9413D577AEDF03B5 /* CocoaAsyncSocket-iOS.modulemap */,
-				37E2F09999102727C0E5F6C6E4595A82 /* CocoaAsyncSocket-iOS.xcconfig */,
-				1C485D6B0F5E47AF1865862C645A2086 /* CocoaAsyncSocket-iOS-dummy.m */,
-				EC9314756F28181BA5B45A098E8FBA5A /* CocoaAsyncSocket-iOS-prefix.pch */,
-				47B8BD74609ADC60EE79613CFF79D605 /* CocoaAsyncSocket-iOS-umbrella.h */,
-				6A0858459357C205867E99D9A92C882D /* CocoaAsyncSocket-tvOS.modulemap */,
-				CC84BCD9C127DBE82A16175FC89AA83C /* CocoaAsyncSocket-tvOS.xcconfig */,
-				378E2AC8DE3D1C83047CB5A262B2F288 /* CocoaAsyncSocket-tvOS-dummy.m */,
-				0DEF70EE102037E7EB9982E051130BF0 /* CocoaAsyncSocket-tvOS-prefix.pch */,
-				B72A893D1DB76A3D548057F308FBD951 /* CocoaAsyncSocket-tvOS-umbrella.h */,
-				CE1F525882CEB7249CC81A0DAE23A436 /* Info.plist */,
-				3D391985B271795FDE81F69704596714 /* Info.plist */,
+				41FAFE06D668907627D292E85FBF9250 /* Alamofire-iOS.modulemap */,
+				EF2E8CA4D949E990BB74080A6B5B9198 /* Alamofire-iOS.xcconfig */,
+				896702F9A619E3F95E29A1D82D2EE638 /* Alamofire-iOS-dummy.m */,
+				5D1ED298080ABB0F3F9D2AD191C82E08 /* Alamofire-iOS-prefix.pch */,
+				CF18CFE56AE28CD9DC2F1F0A6514E829 /* Alamofire-iOS-umbrella.h */,
+				5346ACB2C0C3DD379C608CA61A78E41B /* Alamofire-tvOS.modulemap */,
+				4E896B40A866FD6A092D68D7763F5557 /* Alamofire-tvOS.xcconfig */,
+				F9CB8FB44DBB51BB0EB2502C738C6CB3 /* Alamofire-tvOS-dummy.m */,
+				CEA07B5701BE3B38C0AE731DCD30F2FA /* Alamofire-tvOS-prefix.pch */,
+				3F33A9CA69E76B1D5A51CF826C0944C6 /* Alamofire-tvOS-umbrella.h */,
+				B2A0B51621F8D1B1D7D90DF84B7BBA70 /* Info.plist */,
+				4E3359397E3FF5BB96FB681E405EE747 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/CocoaAsyncSocket-iOS";
+			path = "../Target Support Files/Alamofire-iOS";
 			sourceTree = "<group>";
 		};
 		EFF62538788BEBF52DABB52EA78C91F9 /* CocoaAsyncSocket */ = {
@@ -411,7 +411,7 @@
 				12EC0771055EDD8A54F1EAFB49EA595F /* GCDAsyncSocket.m */,
 				AF24DC2EC0ACB68B0D42234B2E7FEE98 /* GCDAsyncUdpSocket.h */,
 				F1AFA299F12086A17225DADA36D43677 /* GCDAsyncUdpSocket.m */,
-				E384B5F94B546E284B48EE76DD994EF3 /* Support Files */,
+				3A46C5AC466B2A93C8D83B2332D685A3 /* Support Files */,
 			);
 			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
@@ -818,7 +818,7 @@
 		};
 		3E3ECC31967464DC39B3CFC4BAFFE7B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37E2F09999102727C0E5F6C6E4595A82 /* CocoaAsyncSocket-iOS.xcconfig */;
+			baseConfigurationReference = FB2BCC244D06C90145CBD38AECBA1E29 /* CocoaAsyncSocket-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -896,7 +896,7 @@
 		};
 		4A28E1D50DAE2308D39FDC3C3C2710DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC84BCD9C127DBE82A16175FC89AA83C /* CocoaAsyncSocket-tvOS.xcconfig */;
+			baseConfigurationReference = 230E452F073B69866EA0F17D7E360218 /* CocoaAsyncSocket-tvOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -978,7 +978,7 @@
 		};
 		501335F0FF1959936967AB5889B542E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F4C902FFDBEC636CD9034FFEF315CF5 /* Alamofire-iOS.xcconfig */;
+			baseConfigurationReference = EF2E8CA4D949E990BB74080A6B5B9198 /* Alamofire-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1052,7 +1052,7 @@
 		};
 		91835F1F0D2EDDED2A49B13A9CDC516F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00093F0F1B8657215327C79DD09DD1B3 /* Alamofire-tvOS.xcconfig */;
+			baseConfigurationReference = 4E896B40A866FD6A092D68D7763F5557 /* Alamofire-tvOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1124,7 +1124,7 @@
 		};
 		ABC9CEE728A938C2D3EFA08180092326 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37E2F09999102727C0E5F6C6E4595A82 /* CocoaAsyncSocket-iOS.xcconfig */;
+			baseConfigurationReference = FB2BCC244D06C90145CBD38AECBA1E29 /* CocoaAsyncSocket-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1157,7 +1157,7 @@
 		};
 		E3D86AC10A0F9A7B91240B824691E380 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC84BCD9C127DBE82A16175FC89AA83C /* CocoaAsyncSocket-tvOS.xcconfig */;
+			baseConfigurationReference = 230E452F073B69866EA0F17D7E360218 /* CocoaAsyncSocket-tvOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1190,7 +1190,7 @@
 		};
 		F732E6341A145F104D52B54792386026 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F4C902FFDBEC636CD9034FFEF315CF5 /* Alamofire-iOS.xcconfig */;
+			baseConfigurationReference = EF2E8CA4D949E990BB74080A6B5B9198 /* Alamofire-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1224,7 +1224,7 @@
 		};
 		FF68BC4D7EA540C9F22E7E1C70F57A46 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00093F0F1B8657215327C79DD09DD1B3 /* Alamofire-tvOS.xcconfig */;
+			baseConfigurationReference = 4E896B40A866FD6A092D68D7763F5557 /* Alamofire-tvOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

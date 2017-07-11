@@ -22,7 +22,7 @@ class Instrument
 {
    var name:String?
    var serialnumber:String?
-   
+   var runstate:String?
    var realtimeSignals:[[String:Any]]?
    
    var heartbeat:String? //instrument unique identifier
@@ -61,6 +61,16 @@ class Instrument
                }
             }
          })
+         
+         instrumentManager?.request(subject: "\(heartbeat ?? "").get", payload: "run state")
+         {runstate in
+            if(self.runstate) == nil
+            {
+               print("\(self.heartbeat ?? ""):runstate:\(runstate)")
+               
+               self.runstate? = runstate
+            }
+         }
 
       }
    }
@@ -190,9 +200,11 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
       _requests[replyto] = callback
       
       let s = "SUB \(replyto) \(_msgIndex)\r\n"
+      let u = "UNSUB \(_msgIndex) 1\r\n"
       let p = "PUB \(subject) \(replyto) \(payload.lengthOfBytes(using: .utf8))\r\n\(payload)\r\n"
       
       _socket?.write(Data(bytes: Array(s.utf8)), withTimeout: -1, tag: 9)
+      _socket?.write(Data(bytes: Array(u.utf8)), withTimeout: -1, tag: 9)
       _socket?.write(Data(bytes: Array(p.utf8)), withTimeout: -1, tag: 9)
    }
    
