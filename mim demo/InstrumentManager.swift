@@ -15,7 +15,7 @@ protocol InstrumentManagerDelegate
 
 protocol InstrumentDelegate
 {
-   func notify(hint:String)
+   func notify(subject:Instrument, hint:String)
 }
 
 class Instrument
@@ -40,7 +40,7 @@ class Instrument
                
                if self.delegate != nil
                {
-                  self.delegate?.notify(hint: "realtimeSignals")
+                  self.delegate?.notify(subject:self, hint: "realtimeSignals")
                }
                
             } catch let error as NSError {
@@ -57,7 +57,7 @@ class Instrument
                   
                if self.delegate != nil
                {
-                  self.delegate?.notify(hint: "runstate")
+                  self.delegate?.notify(subject:self, hint: "runstate")
                }
             }
          })

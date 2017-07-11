@@ -16,14 +16,25 @@ class InstrumentCollectionViewCell: UICollectionViewCell
    @IBOutlet weak var imageView: UIImageView!
 }
 
-class InstrumentCollectionViewController: UICollectionViewController, InstrumentManagerDelegate {
+class InstrumentCollectionViewController: UICollectionViewController, InstrumentManagerDelegate, InstrumentDelegate{
    
    var app:AppDelegate?
    var instrumentManager:InstrumentManager?
    var row:Int? = 0
+   var cellDictionary = [Int: UICollectionViewCell]()
    
    func instrumentListUpdate(instruments: [Instrument]) {
       collectionView?.reloadData()
+   }
+   
+   func notify(subject:Instrument, hint:String)
+   {
+      if hint == "runstate"
+      {
+         //find instrument in instruments and get index
+         //use index to get cell
+         //change label background color based on instrument run state
+      }
    }
    
    override func viewDidLoad() {
@@ -44,6 +55,13 @@ class InstrumentCollectionViewController: UICollectionViewController, Instrument
       //instrumentManager = app?._instrumentManager!;
       instrumentManager = InstrumentManager(ip: "52.203.231.127", port: 4222)
       instrumentManager?.delegate = self
+   }
+   
+   override func viewWillAppear(_ animated: Bool) {
+      for instrument in (instrumentManager?.instruments)!
+      {
+         instrument.delegate = self
+      }
    }
    
    override func didReceiveMemoryWarning() {
@@ -74,13 +92,26 @@ class InstrumentCollectionViewController: UICollectionViewController, Instrument
       return (instrumentManager?.instruments.count)!
    }
    
-   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! InstrumentCollectionViewCell
+   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+   {
+      let cell = collectionView.dequeueReusableCell(
+         withReuseIdentifier: reuseIdentifier,
+         for: indexPath) as! InstrumentCollectionViewCell
       
       // Configure the cell
-      cell.label.text = instrumentManager?.instruments[indexPath.row].name
       
       let instrument = instrumentManager?.instruments[indexPath.row]
+      
+      if instrument?.runstate == "Idle"
+      {
+         cell.label.backgroundColor = UIColor.green
+      }
+      else
+      {
+         cell.label.backgroundColor = UIColor.red
+      }
+      
+      cell.label.text = instrument?.name
       
       if instrument?.instrumentType == "DSC"
       {

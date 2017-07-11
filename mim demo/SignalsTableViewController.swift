@@ -39,7 +39,7 @@ class SignalsTableViewController: UITableViewController, InstrumentDelegate {
    }
    
    var i:Int = 0
-   func notify(hint:String)
+   func notify(subject:Instrument, hint:String)
    {
       i += 1
       
