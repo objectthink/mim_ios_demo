@@ -18,12 +18,18 @@ protocol InstrumentDelegate
    func notify(subject:Instrument, hint:String)
 }
 
+protocol InstrumentViewControllerDelegate
+{
+   var instrument:Instrument {get set}
+}
+
 class Instrument
 {
    var name:String?
    var serialnumber:String?
    var runstate:String?
    var realtimeSignals:[[String:Any]]?
+   var syslog:String?
    
    var heartbeat:String? //instrument unique identifier
    {
@@ -58,6 +64,19 @@ class Instrument
                self.delegate?.notify(subject:self, hint: "runstate")
             }
          })
+         
+         instrumentManager?.subscribe(subject: "\(heartbeat ?? "").error", callback:
+            { syslog in
+               print("syslog:\(self.name ?? "unknown") \(syslog)")
+               
+               self.syslog = syslog
+               
+               if self.delegate != nil
+               {
+                  self.delegate?.notify(subject:self, hint: "syslog")
+               }
+         })
+
          
       }
    }

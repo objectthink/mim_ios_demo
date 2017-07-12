@@ -1,16 +1,36 @@
 //
-//  InstrumentViewController.swift
+//  SyslogViewController.swift
 //  mim demo
 //
-//  Created by stephen eshelman on 6/25/17.
+//  Created by stephen eshelman on 7/12/17.
 //  Copyright © 2017 stephen eshelman. All rights reserved.
 //
 
 import UIKit
 
-class InstrumentViewController: UITableViewController {
+class SyslogViewController: UITableViewController, InstrumentDelegate, InstrumentViewControllerDelegate {
    
-   var instrument:Instrument?
+   var anInstrument:Instrument?
+   var instrument:Instrument
+   {
+      get
+      {
+         return self.anInstrument!
+      }
+      set(n)
+      {
+         self.anInstrument = n
+         self.anInstrument?.delegate = self
+      }
+   }
+   
+   func notify(subject:Instrument, hint:String)
+   {
+      if hint == "syslog"
+      {
+         print("\(instrument.syslog ?? "a syslogl")")
+      }
+   }
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -20,8 +40,6 @@ class InstrumentViewController: UITableViewController {
       
       // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
       // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-      
-      self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
    }
    
    override func didReceiveMemoryWarning() {
@@ -33,76 +51,23 @@ class InstrumentViewController: UITableViewController {
    
    override func numberOfSections(in tableView: UITableView) -> Int {
       // #warning Incomplete implementation, return the number of sections
-      return 1
+      return 0
    }
    
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       // #warning Incomplete implementation, return the number of rows
-      return 3
+      return 0
    }
    
-   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-      
-      // Configure the cell...
-      switch indexPath.row {
-      case 0:
-         cell.textLabel?.text = "\(instrument?.name ?? "<unknown>") info"
-         break
-      case 1:
-         cell.textLabel?.text = "Real Time Signals"
-         break
-      case 2:
-         cell.textLabel?.text = "Syslog"
-      default:
-         break
-      }
-      
-      cell.selectionStyle = UITableViewCellSelectionStyle.blue
-      cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-      
-      return cell
-   }
-   
-   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      switch indexPath.row
-      {
-      case 0:
-         let controller = storyboard.instantiateViewController(withIdentifier: "InstrumentInfoViewController")
-         
-         let instrumentInfoViewController = controller as! InstrumentInfoViewController
-         
-         instrumentInfoViewController.instrument = instrument
-
-         navigationController?.pushViewController(controller, animated: true)
-         break
-      case 1:
-         let controller = storyboard.instantiateViewController(withIdentifier: "SignalsTableViewController")
-         
-         let signalsTableViewController = controller as! SignalsTableViewController
-         
-         signalsTableViewController.instrument = instrument
-         
-         navigationController?.pushViewController(controller, animated: true)
-         break
-      case 2:
-         let controller = storyboard.instantiateViewController(withIdentifier: "SyslogViewController")
-         
-         var syslogViewController = controller as! InstrumentViewControllerDelegate //SyslogViewController
-         
-         syslogViewController.instrument = instrument!
-         
-         navigationController?.pushViewController(controller, animated: true)
-         break;
-      default:
-         break
-      }
-   }
-   
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      print("about to segue")
-   }
+   /*
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    
+    // Configure the cell...
+    
+    return cell
+    }
+    */
    
    /*
     // Override to support conditional editing of the table view.

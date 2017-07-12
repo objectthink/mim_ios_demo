@@ -29,6 +29,7 @@
 		019986B11EEEA1C1003D3664 /* InstrumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019986B01EEEA1C1003D3664 /* InstrumentManager.swift */; };
 		5E9A90F40C548E5990D92730 /* Pods_mim_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6788E59DC4B334BC2CAE77FF /* Pods_mim_demo.framework */; };
 		830E72A9F76CFDB0D41BF73B /* Pods_mim_demo_tv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAEC23591BAD39000ACD637 /* Pods_mim_demo_tv.framework */; };
+		A38B86EF1F16856F009B978E /* SyslogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B86EE1F16856F009B978E /* SyslogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		4BAEC23591BAD39000ACD637 /* Pods_mim_demo_tv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mim_demo_tv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604D4E4D297F16D3142396E9 /* Pods-mim demo tv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mim demo tv.release.xcconfig"; path = "Pods/Target Support Files/Pods-mim demo tv/Pods-mim demo tv.release.xcconfig"; sourceTree = "<group>"; };
 		6788E59DC4B334BC2CAE77FF /* Pods_mim_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mim_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A38B86EE1F16856F009B978E /* SyslogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyslogViewController.swift; sourceTree = "<group>"; };
 		B0D84DDF8E78C106C8BFFE8A /* Pods-mim demo tv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mim demo tv.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mim demo tv/Pods-mim demo tv.debug.xcconfig"; sourceTree = "<group>"; };
 		E45C6A05AC94E45AA83FBDA8 /* Pods-mim demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mim demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-mim demo/Pods-mim demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				0141C2761EAB739A00DB8A17 /* AppDelegate.swift */,
 				0141C2781EAB739A00DB8A17 /* ViewController.swift */,
 				0141C27A1EAB739A00DB8A17 /* Main.storyboard */,
+				A38B86EE1F16856F009B978E /* SyslogViewController.swift */,
 				0141C27D1EAB739A00DB8A17 /* Assets.xcassets */,
 				0141C27F1EAB739A00DB8A17 /* LaunchScreen.storyboard */,
 				0141C2821EAB739A00DB8A17 /* Info.plist */,
@@ -380,6 +383,7 @@
 				0166FEED1F00855800C861E3 /* InstrumentInfoViewController.swift in Sources */,
 				019986B11EEEA1C1003D3664 /* InstrumentManager.swift in Sources */,
 				0141C2791EAB739A00DB8A17 /* ViewController.swift in Sources */,
+				A38B86EF1F16856F009B978E /* SyslogViewController.swift in Sources */,
 				0141C2771EAB739A00DB8A17 /* AppDelegate.swift in Sources */,
 				0166FEE91F005E2B00C861E3 /* InstrumentCollectionViewController.swift in Sources */,
 			);
