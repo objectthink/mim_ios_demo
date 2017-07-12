@@ -14,6 +14,7 @@ class InstrumentCollectionViewCell: UICollectionViewCell
 {
    @IBOutlet weak var label: UILabel!
    @IBOutlet weak var imageView: UIImageView!
+   @IBOutlet weak var statusLabel: UILabel!
 }
 
 class InstrumentCollectionViewController: UICollectionViewController, InstrumentManagerDelegate, InstrumentDelegate{
@@ -21,7 +22,7 @@ class InstrumentCollectionViewController: UICollectionViewController, Instrument
    var app:AppDelegate?
    var instrumentManager:InstrumentManager?
    var row:Int? = 0
-   var cellDictionary = [Int: UICollectionViewCell]()
+   var cells = [String: InstrumentCollectionViewCell]()
    
    func instrumentListUpdate(instruments: [Instrument]) {
       collectionView?.reloadData()
@@ -34,6 +35,22 @@ class InstrumentCollectionViewController: UICollectionViewController, Instrument
          //find instrument in instruments and get index
          //use index to get cell
          //change label background color based on instrument run state
+         
+         let cell = cells[subject.heartbeat!]
+         
+         if subject.runstate == "Idle"
+         {
+            cell?.statusLabel.backgroundColor = UIColor.green
+         }
+         else
+         {
+            cell?.statusLabel.backgroundColor = UIColor.red
+         }
+         
+         cell?.statusLabel.text = subject.runstate
+         
+         //collectionView?.reloadData()
+         
       }
    }
    
@@ -58,10 +75,11 @@ class InstrumentCollectionViewController: UICollectionViewController, Instrument
    }
    
    override func viewWillAppear(_ animated: Bool) {
-      for instrument in (instrumentManager?.instruments)!
-      {
-         instrument.delegate = self
-      }
+      //for instrument in (instrumentManager?.instruments)!
+      //{
+      //   instrument.delegate = self
+      //}
+      collectionView?.reloadData()
    }
    
    override func didReceiveMemoryWarning() {
@@ -99,16 +117,21 @@ class InstrumentCollectionViewController: UICollectionViewController, Instrument
          for: indexPath) as! InstrumentCollectionViewCell
       
       // Configure the cell
-      
       let instrument = instrumentManager?.instruments[indexPath.row]
       
+      instrument?.delegate = self
+      
+      cells[(instrument?.heartbeat)!] = cell
+
+      cell.statusLabel.text = instrument?.runstate
+
       if instrument?.runstate == "Idle"
       {
-         cell.label.backgroundColor = UIColor.green
+         cell.statusLabel.backgroundColor = UIColor.green
       }
       else
       {
-         cell.label.backgroundColor = UIColor.red
+         cell.statusLabel.backgroundColor = UIColor.red
       }
       
       cell.label.text = instrument?.name

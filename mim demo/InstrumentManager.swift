@@ -48,30 +48,17 @@ class Instrument
             }
          })
          
-         
          instrumentManager?.subscribe(subject: "\(heartbeat ?? "").runstate", callback:
-         { (payload) in
-            do
+         { (runstate) in
+            print("runstate:\(self.name ?? "unknown") \(runstate)")
+            self.runstate = runstate
+            
+            if self.delegate != nil
             {
-               print("runstate:\(self.name ?? "unknown") \(payload)")
-                  
-               if self.delegate != nil
-               {
-                  self.delegate?.notify(subject:self, hint: "runstate")
-               }
+               self.delegate?.notify(subject:self, hint: "runstate")
             }
          })
          
-         instrumentManager?.request(subject: "\(heartbeat ?? "").get", payload: "run state")
-         {runstate in
-            if(self.runstate) == nil
-            {
-               print("\(self.heartbeat ?? ""):runstate:\(runstate)")
-               
-               self.runstate? = runstate
-            }
-         }
-
       }
    }
    
@@ -323,13 +310,18 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
                }
             }
             
+            dGroup.enter()
+            request(subject: "\(payload).get", payload: "run state")
+            {runstate in
+               print("\(payload):runstate:\(runstate)")
+               self._heartbeats[payload]?.runstate = runstate
+               dGroup.leave()
+            }
+            
             //notify once we have all instrument info
             dGroup.notify(queue: .main, execute: {
-               
                print("  notifying \(payload)")
-               
                self.delegate?.instrumentListUpdate(instruments: self.instruments)
-               
             })
          }
       }
