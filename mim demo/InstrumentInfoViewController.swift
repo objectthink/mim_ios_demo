@@ -10,9 +10,14 @@ import UIKit
 
 class InstrumentInfoViewController: UIViewController {
    
+   @IBOutlet weak var _nameLabel: UILabel!
+   @IBOutlet weak var _serialLabel: UILabel!
+   @IBOutlet weak var _locationLabel: UILabel!
+   
    var instrument:Instrument?
    {
-      didSet{
+      didSet
+      {
       }
    }
    
@@ -61,6 +66,9 @@ class InstrumentInfoViewController: UIViewController {
       super.viewDidLoad()
       
       // Do any additional setup after loading the view.
+      _nameLabel.text = instrument?.name
+      _serialLabel.text = instrument?.serialnumber
+      _locationLabel.text = instrument?.location
    }
    
    override func didReceiveMemoryWarning() {
