@@ -16,6 +16,18 @@ protocol InstrumentManagerDelegate
 protocol InstrumentDelegate
 {
    func notify(subject:Instrument, hint:String)
+   func notifyEx(subject:Instrument, hint:String, value:String)
+}
+
+extension InstrumentDelegate
+{
+   func notifyEx(subject:Instrument, hint:String, value:String)
+   {
+   }
+
+   func notify(subject:Instrument, hint:String)
+   {
+   }
 }
 
 protocol InstrumentViewControllerDelegate
@@ -74,6 +86,7 @@ class Instrument
                if self.delegate != nil
                {
                   self.delegate?.notify(subject:self, hint: "syslog")
+                  self.delegate?.notifyEx(subject:self, hint: "syslog", value:syslog)
                }
          })
 

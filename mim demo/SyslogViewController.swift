@@ -10,6 +10,8 @@ import UIKit
 
 class SyslogViewController: UITableViewController, InstrumentDelegate, InstrumentViewControllerDelegate {
    
+   var syslog:[String] = [String]()
+   
    var anInstrument:Instrument?
    var instrument:Instrument
    {
@@ -24,11 +26,19 @@ class SyslogViewController: UITableViewController, InstrumentDelegate, Instrumen
       }
    }
    
-   func notify(subject:Instrument, hint:String)
+   func notifyEx(subject:Instrument, hint:String, value:String)
    {
       if hint == "syslog"
       {
-         print("\(instrument.syslog ?? "a syslogl")")
+         print("\(value)")
+         
+         syslog.append(value)
+         if syslog.count > 25
+         {
+            syslog.removeFirst()
+         }
+         
+         tableView.reloadData()
       }
    }
    
@@ -51,23 +61,23 @@ class SyslogViewController: UITableViewController, InstrumentDelegate, Instrumen
    
    override func numberOfSections(in tableView: UITableView) -> Int {
       // #warning Incomplete implementation, return the number of sections
-      return 0
+      return 1
    }
    
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       // #warning Incomplete implementation, return the number of rows
-      return 0
+      return syslog.count
    }
    
-   /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-    
-    // Configure the cell...
-    
-    return cell
-    }
-    */
+   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let cell = tableView.dequeueReusableCell(withIdentifier: "syslogCell", for: indexPath)
+      
+      // Configure the cell...
+      
+      cell.textLabel?.text = syslog[indexPath.row]
+      
+      return cell
+   }
    
    /*
     // Override to support conditional editing of the table view.
