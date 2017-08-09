@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, InstrumentManagerDelegate
          }
       }
    }
-
+   
    
    // Push notification received
    func application(
@@ -68,16 +68,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, InstrumentManagerDelegate
       // Persist it in your backend in case it's new
       
       //send device token to our feathers service
-//      Alamofire.request(
-//         "http://10.52.50.83:3030/deviceTokens",
-//         method: .post,
-//         parameters: [:],
-//         encoding: "deviceid=\(deviceTokenString)",
-//         headers: [:]).responseJSON
-//         {
-//            (response) in
-//            print(response)
-//         }
+      //      Alamofire.request(
+      //         "http://10.52.50.83:3030/deviceTokens",
+      //         method: .post,
+      //         parameters: [:],
+      //         encoding: "deviceid=\(deviceTokenString)",
+      //         headers: [:]).responseJSON
+      //         {
+      //            (response) in
+      //            print(response)
+      //         }
       
       
       Alamofire.request(
@@ -87,11 +87,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, InstrumentManagerDelegate
          encoding: JSONEncoding.default).responseJSON
          {
             (response) in
-
+            
             print("DEVICE TOKENS")
             print(response)
-         }
-
+      }
+      
       
       let parameters: Parameters = ["deviceToken":"A0D05233EC3EA45AB1508545341CCB0DB365CE7A3804280BB87F0A6DF29DC292"]
       
@@ -101,55 +101,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate, InstrumentManagerDelegate
          parameters: parameters,
          encoding: URLEncoding()
          ).responseJSON
-      { response in
-         //print(response.request)  // original URL request
-         //print(response.response) // HTTP URL response
-         //print(response.data)     // server data
-         //print(response.result)   // result of response serialization
-         
-         print("USER SETTINGS")
-         if let JSON = response.result.value {
-            print("JSON: \(JSON)")
-         }
+         { response in
+            //print(response.request)  // original URL request
+            //print(response.response) // HTTP URL response
+            //print(response.data)     // server data
+            //print(response.result)   // result of response serialization
+            
+            print("USER SETTINGS")
+            if let JSON = response.result.value {
+               print("JSON: \(JSON)")
+            }
       }
       
-//      let dict = ["deviceid":deviceTokenString] as [String: Any]
-//      if let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
-//      {
-//         let url = NSURL(string: "http://10.52.50.83:3030/deviceTokens")!
-//         let request = NSMutableURLRequest(url: url as URL)
-//         request.httpMethod = "POST"
-//         
-//         request.httpBody = jsonData
-//         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//         
-//         let task = URLSession.shared.dataTask(with: request as URLRequest)
-//         {
-//            data,response,error in
-//            if error != nil
-//            {
-//               print("ERROR")
-//               return
-//            }
-//            
-//            do
-//            {
-//               let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-//               
-//               if let parseJSON = json
-//               {
-//                  //let resultValue:String = parseJSON["success"] as! String;
-//                  //print("result: \(resultValue)")
-//                  print(parseJSON)
-//               }
-//            }
-//            catch let error as NSError
-//            {
-//               print(error)
-//            }        
-//         }          
-//         task.resume()
-//      }
+      //      let dict = ["deviceid":deviceTokenString] as [String: Any]
+      //      if let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+      //      {
+      //         let url = NSURL(string: "http://10.52.50.83:3030/deviceTokens")!
+      //         let request = NSMutableURLRequest(url: url as URL)
+      //         request.httpMethod = "POST"
+      //
+      //         request.httpBody = jsonData
+      //         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+      //
+      //         let task = URLSession.shared.dataTask(with: request as URLRequest)
+      //         {
+      //            data,response,error in
+      //            if error != nil
+      //            {
+      //               print("ERROR")
+      //               return
+      //            }
+      //
+      //            do
+      //            {
+      //               let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+      //
+      //               if let parseJSON = json
+      //               {
+      //                  //let resultValue:String = parseJSON["success"] as! String;
+      //                  //print("result: \(resultValue)")
+      //                  print(parseJSON)
+      //               }
+      //            }
+      //            catch let error as NSError
+      //            {
+      //               print(error)
+      //            }
+      //         }
+      //         task.resume()
+      //      }
       
    }
    
@@ -167,10 +167,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, InstrumentManagerDelegate
       didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
    {
       // Override point for customization after application launch.
-
+      
       //_instrumentManager = InstrumentManager(ip: "52.203.231.127", port: 4222)
       //_instrumentManager?.delegate = self
-
+      
       // iOS 10 support
       if #available(iOS 10, *)
       {
@@ -209,27 +209,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate, InstrumentManagerDelegate
    {
       // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
       // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+      
+      print("applicationWillResignActive")
    }
    
    func applicationDidEnterBackground(_ application: UIApplication)
    {
       // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
       // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+      
+      print("applicationDidEnterBackground")
    }
    
    func applicationWillEnterForeground(_ application: UIApplication)
    {
       // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+      
+      print("applicationWillEnterForeground")
    }
    
    func applicationDidBecomeActive(_ application: UIApplication)
    {
       // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+      
+      print("applicationDidBecomeActive")
    }
    
    func applicationWillTerminate(_ application: UIApplication)
    {
       // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+      
+      print("applicationWillTerminate")
    }
 }
 

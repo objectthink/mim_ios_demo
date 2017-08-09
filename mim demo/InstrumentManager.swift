@@ -146,6 +146,10 @@ class Instrument
 class InstrumentManager: NSObject, GCDAsyncSocketDelegate
 {
    var _socket:GCDAsyncSocket?
+   
+   var _ip:String?
+   var _port:Int?
+   
    var _heartbeats:Dictionary<String, Instrument> = [:]
    var _requests:Dictionary<String, (String)->()> = [:] //[replyto : callback]
    var _subscriptions:Dictionary<String, (String)->()> = [:]
@@ -168,11 +172,13 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
       
       super.init()
       
+      _ip = ip
+      _port = port
+      
       let dq = DispatchQueue(label: "tadispatchqueue")
       _socket = GCDAsyncSocket.init(delegate: self, delegateQueue: dq, socketQueue: dq)
       
       //_socket = GCDAsyncSocket.init(delegate: self, delegateQueue: DispatchQueue.main)
-      
       
       do
       {
@@ -182,6 +188,43 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
       {
          print(error.localizedDescription)
       }
+      
+      //listen for background
+      let notificationCenter = NotificationCenter.default
+      
+      notificationCenter.addObserver(
+         self,
+         selector: #selector(applicationWillResignActive),
+         name: Notification.Name.UIApplicationWillResignActive,
+         object: nil)
+      
+      notificationCenter.addObserver(
+         self,
+         selector: #selector(applicationWillEnterForeground),
+         name: Notification.Name.UIApplicationWillEnterForeground,
+         object: nil)
+   }
+   
+   func applicationWillResignActive() {
+      print("App moved to background!")
+      
+      _socket?.disconnect()
+   }
+   
+   func applicationWillEnterForeground() {
+      print("App moved to foreground!")
+      
+      do
+      {
+         try _socket?.connect(toHost: _ip!, onPort: UInt16(_port!))
+         
+         _heartbeats.removeAll()
+      }
+      catch
+      {
+         print(error.localizedDescription)
+      }
+
    }
    
    //implement gets/sets/actions
