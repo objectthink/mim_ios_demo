@@ -293,7 +293,9 @@ class InstrumentManager: NSObject, GCDAsyncSocketDelegate
       //look for subject
       //4 tokens ( no reply-to )
       //5 tokens ( reply-to is present )
-      var tokens = msg._split(separator: " ")
+      //var tokens = msg._split(separator: " ")
+      
+      var tokens = msg.components(separatedBy: " ")
       var lines:[String] = []
       
       let subject = tokens[1]
