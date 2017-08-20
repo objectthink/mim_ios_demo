@@ -6,7 +6,6 @@ target 'mim demo' do
   use_frameworks!
 
   # Pods for mim demo
-  pod 'Alamofire', '~> 4.4'
   pod 'CocoaAsyncSocket'
   pod 'Feathers'
   pod 'FeathersSwiftRest'
@@ -17,6 +16,5 @@ target 'mim demo tv' do
   use_frameworks!
 
   # Pods for mim demo
-  pod 'Alamofire', '~> 4.4'
   pod 'CocoaAsyncSocket'
 end

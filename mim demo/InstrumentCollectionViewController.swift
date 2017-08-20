@@ -69,9 +69,8 @@ class InstrumentCollectionViewController: UICollectionViewController, Instrument
       
       app = UIApplication.shared.delegate as? AppDelegate;
       
-      //instrumentManager = app?._instrumentManager!;
-      //instrumentManager = InstrumentManager(ip: "52.203.231.127", port: 4222)
-      instrumentManager = InstrumentManager(ip: "34.232.120.31", port: 4222)
+      //instrumentManager = InstrumentManager(ip: "34.232.120.31", port: 4222)
+      instrumentManager = InstrumentManager(ip: "www.taclouddemo.com", port: 4222)
       instrumentManager?.delegate = self
    }
    

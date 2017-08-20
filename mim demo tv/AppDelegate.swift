@@ -8,7 +8,6 @@
 
 import UIKit
 import UserNotifications
-import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
       // Override point for customization after application launch.
       
-      _instrumentManager = InstrumentManager(ip: "52.203.231.127", port: 4222)
+      _instrumentManager = InstrumentManager(ip: "www.taclouddemo.com", port: 4222)
 
       return true
    }

@@ -8,10 +8,10 @@
 
 import UIKit
 import UserNotifications
-import Alamofire
 import Feathers
 import FeathersSwiftRest
 
+/*
 extension String: ParameterEncoding {
    
    public func encode(
@@ -23,6 +23,7 @@ extension String: ParameterEncoding {
       return request
    }
 }
+*/
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, InstrumentManagerDelegate
@@ -69,92 +70,89 @@ class AppDelegate: UIResponder, UIApplicationDelegate, InstrumentManagerDelegate
       
       // Persist it in your backend in case it's new
       
-      //send device token to our feathers service
-      //      Alamofire.request(
-      //         "http://10.52.50.83:3030/deviceTokens",
-      //         method: .post,
-      //         parameters: [:],
-      //         encoding: "deviceid=\(deviceTokenString)",
-      //         headers: [:]).responseJSON
-      //         {
-      //            (response) in
-      //            print(response)
-      //         }
-      
+      /////////FEATHERS IMPLEMENTATION
+      //         Feathers(provider: RestProvider(baseURL: URL(string:"http://34.232.120.31:3030")!))
       let feathersRestApp =
-         Feathers(provider: RestProvider(baseURL: URL(string:"")!))
-            
-      Alamofire.request(
-         "http://34.232.120.31:3030/deviceTokens",
-         method: .post,
-         parameters: ["deviceToken":deviceTokenString],
-         encoding: JSONEncoding.default).responseJSON
-         {
-            (response) in
-            
-            print("DEVICE TOKENS")
+         Feathers(provider: RestProvider(baseURL: URL(string:"http://www.taclouddemo.com:3030")!))
+      
+      let service = feathersRestApp.service(path: "deviceTokens")
+      service.request(.find(query: Query()))
+         .on(value: { response in
+            print("service response:")
             print(response)
-         }
+         })
+         .start()
       
-      
-      let parameters: Parameters = ["deviceToken":"A0D05233EC3EA45AB1508545341CCB0DB365CE7A3804280BB87F0A6DF29DC292"]
-      
-      Alamofire.request(
-         "http://10.52.50.83:3030/userSettings/",
-         method: .get,
-         parameters: parameters,
-         encoding: URLEncoding()
-         ).responseJSON
+      service.request(
+         .create(data: ["deviceToken" : deviceTokenString], query: nil))
+         .on(value:
          { response in
-            //print(response.request)  // original URL request
-            //print(response.response) // HTTP URL response
-            //print(response.data)     // server data
-            //print(response.result)   // result of response serialization
-            
-            print("USER SETTINGS")
-            if let JSON = response.result.value {
-               print("JSON: \(JSON)")
-            }
-      }
+            print("service response:")
+            print(response)
+         })
+         .on(starting: {
+            print("starting")
+         }, started: {
+            print("started")
+         }, event: { (event) in
+            print("event")
+            print("   \(event)")
+         }, failed: { (error) in
+            print("error")
+            print("   \(error)")
+         }, completed: {
+            print("completed")
+         }, interrupted: {
+            print("interrupted")
+         }, terminated: {
+            print("terminated")
+         }, disposed: {
+            print("disposed")
+         }, value: { (response) in
+            print(response)
+         })
+         .start()
       
-      //      let dict = ["deviceid":deviceTokenString] as [String: Any]
-      //      if let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
-      //      {
-      //         let url = NSURL(string: "http://10.52.50.83:3030/deviceTokens")!
-      //         let request = NSMutableURLRequest(url: url as URL)
-      //         request.httpMethod = "POST"
-      //
-      //         request.httpBody = jsonData
-      //         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-      //
-      //         let task = URLSession.shared.dataTask(with: request as URLRequest)
-      //         {
-      //            data,response,error in
-      //            if error != nil
-      //            {
-      //               print("ERROR")
-      //               return
-      //            }
-      //
-      //            do
-      //            {
-      //               let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-      //
-      //               if let parseJSON = json
-      //               {
-      //                  //let resultValue:String = parseJSON["success"] as! String;
-      //                  //print("result: \(resultValue)")
-      //                  print(parseJSON)
-      //               }
-      //            }
-      //            catch let error as NSError
-      //            {
-      //               print(error)
-      //            }
-      //         }
-      //         task.resume()
-      //      }
-      
+      //add some user settings - example
+      let userSettings = feathersRestApp.service(path: "userSettings")
+      userSettings.request(.find(query: Query()))
+         .on(value: { response in
+            print("service response:")
+            print(response)
+         })
+         .start()
+
+      userSettings.request(
+         .create(data: ["deviceToken" : deviceTokenString, "serialNumberContains":["5500-0047","PP01","PP02","Artist"]], query: nil))
+         .on(value:
+            { response in
+               print("service response:")
+               print(response)
+         })
+         .on(starting: {
+            print("starting")
+         }, started: {
+            print("started")
+         }, event: { (event) in
+            print("event")
+            print("   \(event)")
+         }, failed: { (error) in
+            print("error")
+            print("   \(error)")
+         }, completed: {
+            print("completed")
+         }, interrupted: {
+            print("interrupted")
+         }, terminated: {
+            print("terminated")
+         }, disposed: {
+            print("disposed")
+         }, value: { (response) in
+            print(response)
+         })
+         .start()
+
+      ///////////////////////////////
    }
    
    // Called when APNs failed to register the device for push notifications

@@ -111,8 +111,8 @@
 			children = (
 				019986AF1EEEA184003D3664 /* InstrumentManager */,
 				0141C2881EAB73DD00DB8A17 /* mim demo.entitlements */,
-				0141C2761EAB739A00DB8A17 /* AppDelegate.swift */,
 				0141C2781EAB739A00DB8A17 /* ViewController.swift */,
+				0141C2761EAB739A00DB8A17 /* AppDelegate.swift */,
 				0141C27A1EAB739A00DB8A17 /* Main.storyboard */,
 				A38B86EE1F16856F009B978E /* SyslogViewController.swift */,
 				0141C27D1EAB739A00DB8A17 /* Assets.xcassets */,
