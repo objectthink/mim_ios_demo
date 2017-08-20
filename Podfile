@@ -8,6 +8,8 @@ target 'mim demo' do
   # Pods for mim demo
   pod 'Alamofire', '~> 4.4'
   pod 'CocoaAsyncSocket'
+  pod 'Feathers'
+  pod 'FeathersSwiftRest'
 end
 
 target 'mim demo tv' do

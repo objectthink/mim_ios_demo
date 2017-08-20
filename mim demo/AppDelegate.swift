@@ -9,6 +9,8 @@
 import UIKit
 import UserNotifications
 import Alamofire
+import Feathers
+import FeathersSwiftRest
 
 extension String: ParameterEncoding {
    
@@ -79,9 +81,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, InstrumentManagerDelegate
       //            print(response)
       //         }
       
-      
+      let feathersRestApp =
+         Feathers(provider: RestProvider(baseURL: URL(string:"")!))
+            
       Alamofire.request(
-         "http://10.52.50.83:3030/deviceTokens",
+         "http://34.232.120.31:3030/deviceTokens",
          method: .post,
          parameters: ["deviceToken":deviceTokenString],
          encoding: JSONEncoding.default).responseJSON
@@ -90,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, InstrumentManagerDelegate
             
             print("DEVICE TOKENS")
             print(response)
-      }
+         }
       
       
       let parameters: Parameters = ["deviceToken":"A0D05233EC3EA45AB1508545341CCB0DB365CE7A3804280BB87F0A6DF29DC292"]
