@@ -122,10 +122,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, InstrumentManagerDelegate
          })
          .start()
 
+      /*
       userSettings.request(
-         .create(data: ["deviceToken" : deviceTokenString, "serialNumberContains":["5500-0047","PP01","PP02","Artist"]], query: nil))
-         .on(value:
+         .update(
+            id: "", data:["deviceToken" : deviceTokenString, "serialNumberContains":["5500-0047","PP01","PP02","Artist"]],
+            query: nil))
+         .on(value:{
+            response in
+            print(response)
+         })
+      .start()
+      */
+      
+      userSettings.request(.find(query:Query().eq(property: "deviceToken", value: deviceTokenString)))
+         .on(
+            failed:
             { response in
+            print(response)
+            })
+         .start()
+      
+      userSettings.request(
+         .create(
+            data: ["deviceToken" : deviceTokenString, "serialNumberContains":["5500-0047","PP01","PP02","Artist"]],
+            query: nil))
+         .on(
+            value:
+         { response in
                print("service response:")
                print(response)
          })
